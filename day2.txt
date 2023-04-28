@@ -1,0 +1,162 @@
+1.write an algorithm to find the sum of first n even
+
+
+step1: start 
+step2: read the even number n
+step3: initialize sum<--0, i <-- 2 
+step4: if (i<=n)
+          sum<-- sum + i 
+          i<--i+2              
+step5: print sum  
+step6: stop
+
+
+
+2.write an algorithm to find the product of first n odd
+
+step1: start
+step2: read the odd number n
+step3: initialize product <-- 1, i <-- 1,  count <-- 1  
+step4: repatedly execute (i) (ii) and (iii) untill (count<=n)
+       (i) product <-- product*i
+       (ii) i<--i+2 
+       (iii) count<--count+1  
+step5: print product
+step6: stop  
+
+
+
+
+write an algorithm to find the number of positive factors of an integer
+
+
+
+step1: start
+step2: read the value of n
+step3: initialize i<--1, count<--0
+step4: repeatedly execute (i) and (ii) until i<=n
+           (i) if(n%i==0)
+                  count<--count+1
+           (ii) i <-- i+1
+step5: print count
+step6: stop
+
+
+
+
+write an algorithm to find the sum of positive factors of an integer
+
+
+step1: start
+step2: read the value of n
+step3: initialize sum<--0,i<--1
+step4: repeatedly execute (i) and (ii) until i<=n
+           (i) if(n%i==0)
+                  sum<--sum+i
+                  
+           (ii) i<-- i+1
+step5: print sum
+step6: stop
+
+
+
+write an algorithm to find whether a given positive integer is a prime number or not
+
+step1: start
+step2: read postive integer n
+step3: initialize i=1 
+step4: if(n%i==0)
+           print "not prime number"
+       
+       else
+           print "prime number"
+step5:stop
+
+
+
+//26 april 
+
+1.write algorithm to find sum of postive integer
+
+step1: start
+step2: read positive integer num
+step3: intialize sum<-0
+step4: repeatdly execute step (i)-(iii) num!=0
+       (i) remainder<-num%10
+       (ii) sum<-sum+remainder
+       (iii) num<-num/10
+step5:print sum
+step6:stop
+
+
+2.write an algorithm to find whether 3 digit positive integer is armstrong (or) not
+[sum of cubes equal to the number itself   ex: 153 1^3 + 5^3 + 3^3 =153]
+
+
+step1: start
+step2: read 3 digit positive integer num
+step3: initialize sum<-0, temp<-num
+step4: repeatdly execute step (i)-(iv) num!=0
+       (i) remainder<-num%10
+       (ii) r<- remainder**3
+       (iii)sum<-sum+r
+       (iv)num<-num/10
+
+step5:if(sum==temp)
+        print"it is armstrong"
+      else
+         print"it is not armstrong"
+step6:stop 
+
+3. to reverse the digit
+
+step1: start
+step2: read positive integer num
+step3: initialize digit<-0 temp<-num
+step4: repeatdly execute step (i)-(iv) num!=0
+       (i) remainder<-num%10
+       (ii) digit<-digit*10+remainder
+       (iii) num<-num/10
+
+step5:print "digit"
+step6:stop
+
+
+
+
+reverse of positive integer
+step1:start
+step2:read the num value
+step3:initislize the reverel<---0, duplicate<---num
+step4:repeatedly execute 4.1,4.2 and 4.3 whenever(duplicate!=0)
+    4.1:digit<--duplicate%10
+    4.2:reversel<--reversel*10+digit
+    4.3:duplicate<---duplicate//10
+step5:print"reversel"
+step6:end
+
+
+
+
+4.algo to find whether number is perfect number or not
+
+step1: start
+step2: read the value of n
+step3: initialize sum<--0,i<--1
+step4: repeatedly execute (i) and (ii) until i<n
+           (i) if(n%i==0)
+                  sum<--sum+i
+                  
+           (ii) i<-- i+1
+step5:if(sum==n)
+         print"n is a perfect number"
+      else
+         print"n is not a perfect number"
+step6: stop
+
+
+
+5.
+
+
+                                    
