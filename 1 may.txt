@@ -1,0 +1,150 @@
+1.simple
+2.portable
+3.platform independent
+4.object oriented 
+5.multi threading
+6.high level programing language
+7.secured
+8.Rebust
+9.interpreted
+10.dynamic
+11.distributed
+
+
+
+
+1.save code
+  filename.java
+2.compile code
+ javac filename.java
+3,run
+ java filename
+
+jdk- java development kit
+jvm- java vertual machine
+jre- java runtime environment
+
+
+
+jvm:
+>interpreter
+>JIT complier(just in time)
+  -it identifiy most frequently executed part    
+   of code called hotspot
+
+
+
+print belong to printstream class
+system.out is object of printstream class
+
+
+
+
+
+document section
+package section
+import section
+interface section
+class declaration section
+main method section
+
+//Tokens : are smallest unit of programme
+
+1.keyword:which is having predefined meaning
+like if, while, else...
+
+2.Identifier : is a names that are given for class, method,object..
+rules:They can have alphabets, digits, underscore and dollar symbol
+They must not begin with digit
+Keywords cannot be used as identifiers
+whitespace characters are also not allowed
+
+3.literals constant like 99,9.5,100...
+4.operators like +,-,*,&&,||...
+5.special symbols like (),[],{},...
+
+
+//Nameing conventions
+Names of packages-> small letters
+class,interface-> each word of class interface start with capital letter  like DataInput,StringName
+variables and method-> first word small letter second word capital like readLine(),nextLine()
+constants-> all in capital letter
+keywords-> all in small letter
+
+//data types
+
+1.premitive 
+2.non-premitive
+
+premitive
+  1.numerical
+    a. Integer ->
+            byte(1byte):-128 to 127
+            short(2byte):-32768 to 32767
+            int(4byte):-2^31 to 2^31-1
+            long(8byte):-2^63 to 2^63-1
+    b. Float   -> 
+            float(4byte)
+            double(8byte)
+
+  2.non-numerical
+    a. boolean (1byte)->true or false
+    b. charcter(2byte)->'a',"a"
+
+
+
+
+•A package represents a sub directory that contains a group of classes and interfaces. Names of packages in Java are written in small letters
+•Each word of class names and interface names start with a capital letter 
+(String, DataInputStream, ActionListener etc.)
+•The first word of a variable and method name is in small letters; then from second word onwards, each new word starts with a capital letter               
+(readLine( ), nextInt( ) )
+•Constants represent fixed values that cannot be altered. Such constants should be written by using all capital letters
+All keywords should be written by using all small letters
+
+
+
+
+
+
+//type casting 
+the process of converting the value of one data type into another
+1.implicit type casting:(widening)
+-smaller data type to larger data type
+-it is done by compiler automatically
+2.explicit type casting:(narrowing)
+-larger data type to smaller data type
+-carried out by programmer using casting
+- data lose occarnce 
+
+
+
+
+public class Main{
+ 
+public static void main(string[] args){
+ 
+     int a=8;
+     float b=a;
+     System.out.print("integer value in a  is:"+a);
+     System.out.print("float value in b is:"+b);
+
+}
+}
+
+
+
+
+
+public class Main {
+  public static void main(String[] args) {
+    double a = 10.58;
+    int b = (int) a;
+
+    System.out.println(a);  //output 10.58        
+    System.out.println(b);   //output 10    
+ }
+}
+
+
+ 
