@@ -1,0 +1,81 @@
+i=1
+while(i<=10)
+{
+ display i
+ i++
+}
+
+
+1,2,...10
+
+
+
+m=34;
+while(m<=7)
+{
+display(m+4);
+m=m-4;
+}
+
+ come out of loop
+
+ 
+
+k=3
+while(k>2)
+{
+display(k);
+k=k+1;
+}
+
+infinate
+
+
+l=2
+while(l<=18)
+{
+l=l+4;
+display(l);
+l=l+1;
+}
+
+
+
+ite1: i=6
+ite2: i=11
+ite3: i=21
+
+
+
+
+
+1) 1 2 3 4
+2) 1 2 3 4 
+
+
+
+read num
+for(i=0;i<=num;i++)
+{
+  if(i%2==0)
+   disply i
+  else 
+   disply i
+}
+
+read num
+for(i=0;i<=num;i++)
+{
+  if(i%2==0)
+   disply i
+}
+for(i=0;i<=num;i++)
+{
+  if(i%2!=0)
+   disply i
+}
+
+1)
+
+
+

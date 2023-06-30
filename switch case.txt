@@ -1,0 +1,244 @@
+Step 1:  Display( "1. idily
+        2.Dosa 
+        3. Chapati
+        4. Ice cream
+        5. waterbottile)
+Step 2: Choose any one item from the list
+    i.e option  // option ---> 1,2,3,4,5
+
+ 
+
+Step 3: if(option==1)
+        price=20
+    else if(option==2)
+        price=30
+    else if(option==3)
+        price=40
+    else if(option==4)
+        price=35
+    else
+        price=10
+Step 4: Display price
+
+
+
+1)
+
+Step 1:  Display( "1. idily
+        2.Dosa 
+        3. Chapati
+        4. Ice cream
+        5. waterbottile)
+Step 2: Choose any one item from the list
+    i.e option  // option ---> 1,2,3,4,5
+// switch statement
+Step 3: switch(option)
+    {
+        case 1: price=20
+            break;
+        case 2: price=30
+            break;
+        case 3: price=40
+            break;
+        case 4: price=35
+            break;
+        case 5: price=10
+            break;
+    }
+Step 4: Display price
+
+
+
+
+
+
+
+
+-Why we need switch statement? when to use?
+-Syntax for switch statement
+-Ho switch value compared with case values
+-how cases will be executed
+-use of default case
+-use of break statement
+-if we don’t use break statement in switch how cases executed
+-When statements inside some case are executed has context menu
+
+
+
+
+2.suppose Person X want to visit Room numbers 101,103,124,109,200 according to his Boss order and needs to report the room number which he was visited. Write the algorithm to build this scenario.
+
+
+
+
+step1:enter room number i.e room_no
+step2:switch(room_no){
+       
+        case 101: print" room no 101 visited"
+               break;
+        case 103: print" room no 103 visited"
+               break;
+        case 124: print" room no 124 visited"
+               break;
+        case 109: print" room no 109 visited"
+               break;
+        case 200: print" room no 200 visited"
+               break;
+        default:print"invalid room no"
+ }
+step3: stop
+
+
+
+
+
+3. Write the algorithm to implement calculator application by promoting use to choose symbols like +, /, - and  /
+
+
+step1:start
+step2:display
+       '+':addition
+       '-':subtraction
+       '*':multiplication
+       '/':divion
+       
+step3:enter symbol
+step4:read any two numbers num1,num2
+step4:switch(symbol){
+       
+        case '+': print num1+num2
+               break;
+        case '-': print num1-num2
+               break;
+        case '*': print num1*num2
+               break;
+        case '/': print num1/num2
+               break;
+        default: print "inavlid symbol"
+               break;
+ }
+step5: stop
+
+
+
+
+
+
+
+
+4.Write the algorithm to find  bill need to pay by Book store customer with the following menu option 
+
+Book: price 100 Rs
+
+pen: price 3  Rs
+
+pencil: price 1 Rs
+
+Eraser: price 0.5 Rs
+
+Promote the user to select one item name and display the amount need to pay by the customer.
+
+step1:display
+      "Book": price 100 
+
+      "pen": price 3  
+
+      "pencil": price 1 
+
+      "Eraser": price 0.5 
+
+step2:enter the choice
+step3: switch(choice) {
+        case "Book" : print"price is 100"
+                      break;
+        case "pen" : print"price is 3"
+                      break;
+        case "pencil" : print"price is 1"
+                      break;
+        case "Eraser" : print"price is 0.5"
+                      break;
+        default: print"invalid choice"
+step4:stop
+      
+
+
+
+5.Write the algorithm to display month name if month number given
+
+
+step1:enter month_number
+step2: switch(month_number){
+         
+          case 1:print"jan"
+                 break;
+          case 2:print"feb"
+                 break;
+          case 3:print"march"
+                 break;
+          case 4:print"april"
+                 break;
+          case 5:print"may"
+                 break;
+          case 6:print"jun"
+                 break;
+          case 7:print"july"
+                 break;
+          case 8:print"aug"
+                 break;
+          case 9:print"sep"
+                 break;
+          case 10:print"oct"
+                 break;
+          case 11:print"nov"
+                 break;
+          case 12:print"dec"
+                 break;
+
+          default:print"invalid number"
+                  break;
+}
+step3: stop
+
+
+
+6. Write the algorithm to display day name if day number entered.
+
+    Start Day 1 as Monday and Day 7 as Sunday
+
+  step1:enter day_number
+  step2: switch(day_number){
+         
+          case 1:print"monday"
+                 break;
+          case 2:print"tuesday"
+                 break;
+          case 3:print"wednesday"
+                 break;
+          case 4:print"thursday"
+                 break;
+          case 5:print"friday"
+                 break;
+          case 6:print"saturday"
+                 break;
+          case 7:print"sunday"
+                 break;
+          default:print"invalid number"
+                  break;
+}
+step3: stop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

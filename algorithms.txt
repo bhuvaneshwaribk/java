@@ -1,0 +1,202 @@
+Step 1 : Start
+Step 2 : Give value for service in the company  
+       Give value for salary   
+Step 3 : if(service<1)
+          bonus = 3000
+          salary=salary+bonus
+          display salary
+           else
+             if(service<2)
+          bonus = 0.2 * salary
+          salary=salary+bonus
+          display salary
+          else
+            if(service < 5)
+            bonus = 0.3 * salary
+          salary=salary+bonus
+          display salary
+          else   
+            bonus = 10000
+          salary = salary+bonus
+          display salary
+Step 3 : End
+
+ 
+
+
+
+Step 1 : Start
+Step 2 : give value for state and petrolprice
+Step 3 : if (state == "AP")
+         petrolprice = petrolprice +12
+              display petrolprice
+         elseif (state == "TS")
+         petrolprice = petrolprice +10
+              display petrolprice
+       else if(state == "TN" && state == "KA" )
+   petrolprice = petrolprice +9    
+   display petrolprice
+   else (state == "KR")   
+   petrolprice = petrolprice+8
+   display petrolprice
+Step 4 : End
+
+
+
+
+
+Assume that a tourist guide want application that needs to calculate total amount the tourist needs to pay.
+
+Tourism Package are like: 
+
+3 days tour+ with package 3000 then total amount is   package+17%GST
+6days  tour+ with package 5700 then total amount is   package +12%GST
+10days tour+ with package 5700   9000 then total amount is   package+ 6%GST
+20days tour+ with package 5700 17000 then total amount is   package amount without GST
+
+ 
+
+start
+step 1: read days 
+
+step 2:  if(days==3 and packageamount==3000)   
+
+         totalamount=packageamount+((packageamount*17)/100);
+         else
+         if(days==6 and packageamount==5700)
+         totalamount=packageamount+((packageamount*12)/100);
+         else
+         if(days==10 and packageamount==9000) 
+         totalamount=packageamount+((packageamount*6)/100); 
+         else  
+         if(days==20 and packageamount==17000)
+         totalamount=packageamount;
+         else
+         display "invalid input"
+         end
+
+ 
+
+ 
+4.
+
+i.	defined the Greatest number among any given two numbers
+
+    step1:start 
+    step2:read two numbers num1,num2
+    step3:
+          if(num1<num2)
+            print"num2 is greater"
+          else if(num1>num2)
+            print"num1 is greater"
+          else 
+            print"num1 is equal to num2"
+    step4:stop
+
+ii.	Check a number is +ve , -ve or 0
+
+    step1:start
+    step2:read number num
+    step3:if(num>0)
+            print"number is positive"
+          else if(num<0)
+            print"number is negitive"
+          else
+            print"number is zero"
+    step4:stop
+
+ iii. a check number is divisible by 7 and 3
+    step1:start
+    step2:read number a
+    step3:if(a%7==0 && a%3==0)
+            print"a is divisible by both 7 and 3"
+    step4:stop
+
+iv.	A person is eligible to vote or not. 
+    
+     step1:start
+     step2:read the person_age
+     step3:if(person_age>18)
+             print"person is eligible to vote"
+           else 
+             print"person is not eligible to vote"
+     step4:stop
+
+v.	a number is even or odd
+    
+     step1:start
+     step2:read number num
+     step3:if(num % 2 == 0) 
+             print"num is even"
+           else 
+             print"num is odd"
+     step4:stop
+
+vi.	A person is eligible for the loan or not based on his CIVIL score
+		if Civil Score is above 700 eligible for any loan
+		if the Civil score is less than 700 not eligible for any loan
+
+     step1:start
+     step2:read civil_score
+     step3:if(civil_score>700)
+            print"person eligible for any loan"
+           else
+            print"person not eligible for any loan"
+     step4:stop
+
+             
+5. A company will give a bonus to  their employees based on their service in the company
+below 1 year: 3000 Rs bonus
+below 2 years: 20 % of salary as a bonus
+below 5 years: 30 % of salary as a bonus
+5	years or above 10000 Rs as a bonus
+
+    step1:start
+    step2:read the no. of years service i.e service
+    step3:if(service<1)
+            {
+            salary=salary+3000
+            print salary
+            }
+          else if(service<2)
+            {
+            salary=salary*0.2+salary
+            print salary
+            }
+          else if(service<5)
+            {
+             salary=salary*0.3+salary
+             print salary
+            }
+          else if(service>=5)
+            {
+              salary=salary+10000
+              print salary
+            }
+     step 4: stop
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

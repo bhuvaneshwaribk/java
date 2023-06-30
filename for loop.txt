@@ -1,0 +1,108 @@
+1) 
+ for(int i=2;i<=12;i=i+2)
+ print("my ticket no is"+i)
+
+
+2)
+ for(int i=100;i>=40;i=i-10)
+ print("I have " + i + "bisckets)
+
+
+3)
+ for(i=3;i<=17;i=i*3)
+ display i
+
+ Itiration1: i=3
+            3<=17 T
+            i=3*3=> i=9
+ Itrration2:i=9
+          	9<=17 T
+		i=9*3=> i=27 
+ Iteration3: i=27
+		27<=17 F
+
+		go out of the loop
+
+
+
+4)
+for(i=16;i>=1;i=i/2)
+ display i  
+ite1:i=16 16>=1 T i=16/2=> i=8
+ite2:i=8  8>=1  T i=8/2=> i=4
+ite3:i=4  4>=1  T i=4/2=> i=2
+ite4:i=2 2>=1 T i=2/2=> i=1
+ite5:i=1 1>=1 T i=1/2=> i=0.5
+ite6:iṀ=0.5 0.5>=1 F
+
+5)
+Write algorithm to Display series
+
+100, 107, 114, 121, 128, ------ all number less than 205
+
+step1:start
+step2:for(i=100;i<205;i=i+7)
+  		disply i
+step3:stop
+
+
+1. start
+2. intialize i=100
+3. check condition i<=205
+4. disply i
+5. i=i+7
+6. go to step 3
+7. stop
+
+6)
+Write algorithm to find values of 1+2+3+4+5+------100
+start
+1.intialize sum=0
+2.for(i=1;i<=100;i=i+1)
+3.sum=sum+i
+4.display sum
+stop
+
+7) Find the factorial of a number say number!
+
+start 
+intialize fact=1
+read num
+for(i=1;i<=num;i++)
+ fact=fact*i
+disply fact
+end  
+
+8) Find the values of 1+2^2+3^3+4^4+5^5+------nn
+
+start 
+read a and n
+intialize r=a
+for(i=2;i<=n;i++)
+ r=r*a
+disply r->a^n
+end
+
+
+for(i=1;i<=n;i++)
+ r=
+9)  Find the value of 11-22+32-42+52-62------n2
+ start
+read n
+sum=0
+for(i=2;i<=n;i++)
+ sum=sum+(i*i)math.pow(-1,i)
+ disply sum
+end
+ 
+
+10) Find the value of( 1/x)+(1/x2)+( 1/x3) +(1/x4) +------+(1/xn)
+
+start
+read n
+sum=0
+for(i=1;i<=n;i++)
+ term=1/math.pow(x,i)
+ sum=sum+term
+ disply sum
+end
