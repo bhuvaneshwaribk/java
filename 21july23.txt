@@ -1,0 +1,39 @@
+String tokenizer() is available at util package
+name, ifsc code, account no:
+change name ifsc code, acc no:
+
+
+
+
+
+
+Write a Java program to concatenate a given string to the end of another string
+Write a java program to find the maximum occurring character in a given String
+Write a Java program to create a new String object with the contents of a character array.
+Write a Java program to get the character at the given index within the String
+Write a Java program to compare two strings lexicographically
+Write a Java program to compare a given string to another string, ignoring case considerations.
+Write a Java program to convert all the characters in a string to uppercase
+Write a Java program to get the index of a pattern in the given string
+Write a java program to remove all duplicates from a given string?
+Write a java program to print the duplicate characters from the given String
+Write a java program to reverse a given String
+Write a java program to find the first non-repeating character in a given String
+Write a java program to check if two given String is the anagram of each other
+Write a java program to check if a given String is Palindrome or not
+Write a java program toconvert String to an integer
+
+Write a java program to count the number of words in String
+
+
+
+/* int size=sb.length();
+    int j=0;
+    char a[]=new char[size];
+    for(int i=0;i<sb.length();i++){
+      a[j]=sb.charAt(i);
+      j++;
+    }
+    for(int k=0;k<a.length;k++){
+      System.out.println(a[k]);
+    }*/

@@ -1,0 +1,581 @@
+[10:15] Srilatha Manam
+
+class A
+
+{
+
+int a;
+
+int read()
+
+{
+
+a=10;
+
+return a*8;
+
+}
+
+ 
+
+void display()
+
+{
+
+System.out.println(a)
+
+}
+
+ 
+
+}
+
+class Amain()
+
+{
+
+public static void main(String args[])
+
+{
+
+A a1=new A();   // A() [classname()];  indicates that calling constrcutor
+// calling contructor need to execute constructor definiton
+
+ 
+
+// A(); calling constructor----> constructor defition     
+       A()
+      {
+       -----
+       -----
+      }
+
+ 
+
+ 
+
+when we not written any constructor definition in the class then JVM will assign one default construtor internally
+a1.display();  // calling function display ---> execute display() {  }
+
+ 
+
+calling function ----> excecute function definition 
+System.out.println(a1.read());  // a1.read()------> execute read()
+
+
+}
+}
+
+
+synatx for defalut constructor is:  
+                    classname()
+                    {
+                    -----
+		    -----
+                    }
+default construtor have empty peranthesis with empty block
+
+
+
+
+//no defualt constructor is created because we have definde constructor i.e A()
+class A
+
+{
+
+    int a;
+
+    A()  ----> it is not default constructor because created by programmer  it is called No Argument costructor
+
+    {
+
+    }
+ 
+    A() --->no argument constructor with block of code
+   {
+     a=23;
+   }
+   
+
+  A(int i)--->parameteized constructor
+  {
+   
+
+  }
+
+
+    int read()
+
+    {
+
+        a=10;
+
+        return a*8;
+
+    }
+
+ 
+
+    void display()
+
+    {
+
+        System.out.println(a)
+
+    }
+
+ 
+
+}
+
+class Amain
+
+{
+
+public static void main(String args[])
+
+{
+
+A a1=new A(); 
+
+a1.display(); 
+
+System.out.println(a1.read());  
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+class A {
+  int a, b;
+
+ 
+
+  A() // -----> it is not default constructor because it was created by programmer
+  // no argument constructor
+  {
+
+ 
+
+  }
+
+ 
+
+  /*
+   * another way of using no argument constructor
+   * 
+   * A()
+   * {
+   * a=23;
+   * }
+   * 
+   */
+  A(int x) // parameterized constructor with one argument
+  {
+    a = x;
+  }
+
+ 
+
+  A(int v, int m)// parameterized constructor with two arguments
+  {
+    a = v;
+    b = m;
+  }
+
+ 
+
+  void display() {
+    System.out.println(a);
+  }
+
+ 
+
+}
+
+ 
+
+class Amain {
+  public static void main(String args[]) {
+    A a1 = new A(); // A(); calling no argument constructor
+    a1.display();
+
+ 
+
+    A a2 = new A(89); // A(89) will call parameterized constructor with one argument
+    a2.display();
+    A a3 = new A(100, 200); // A(100,200) will call parameterized constructor with two argument
+    a3.display();
+
+ 
+
+  }
+}
+
+
+
+
+// invalid example 
+
+class A {
+  int a, b;
+
+  A(int x) // parameterized constructor with one argument
+  {
+    a = x;
+  }
+
+ 
+
+  
+
+ 
+
+  void display() {
+    System.out.println(a);
+  }
+
+ 
+
+}
+
+ 
+
+class Amain {
+  public static void main(String args[]) {
+    A a1 = new A(); // A(); calling no argument constructor
+    a1.display();
+
+ 
+
+    A a2 = new A(89); // A(89) will call parameterized constructor with one argument
+    a2.display();
+    A a3 = new A(100, 200); // A(100,200) will call parameterized constructor with two argument
+    a3.display();
+
+ 
+
+  }
+}
+
+
+
+
+
+
+
+class A {
+  int a, b;      
+  A(int x, int y) // x,y local varaibles to construtor
+  {
+      // int x---> local varaibles to construtor
+    a = x;
+    b=y;
+  }
+
+ 
+
+  void display() {
+    System.out.println(a);
+     System.out.println(b);
+  }
+
+ 
+
+}
+
+ 
+
+class Amain {
+  public static void main(String args[]) {
+       A a3 = new A(100, 200); 
+    a3.display();
+
+ 
+
+  }
+}
+
+
+
+--------why we have to use this keyword-----------
+
+
+class A {
+  int a, b;      // insatnce varaibles  
+  A(int a, int b)  // a,b local varaibles to construtor
+  {
+      // int x---> local varaibles to construtor
+    a = a;  // lettside a is a local varaible or instance varaible
+    // there is no clarity on wheather loack value assigned to inatance varaible (or) inatace varaible value assign to local variable
+    // so JVM wil take defalut values for both a& b
+    b=b;
+  }
+
+ 
+
+  void display() {
+    System.out.println(a);
+     System.out.println(b);
+  }
+
+ 
+
+}
+
+output===> 0,0
+
+
+-----how this keyword slove problem-----
+class A {
+  int a, b;    // insatnce varaibles  
+  A(int a, int b) // a,b local varaibles to construtor
+  {      
+    this.a = a;  // 'this.a' is instance variable and 'a' is local variable
+    this.b=b;
+  }
+
+ 
+
+  void display() {
+    System.out.println(a);
+     System.out.println(b);
+  }
+
+ 
+
+}
+
+ 
+
+class Amain {
+  public static void main(String args[]) {
+       A a3 = new A(100, 200); 
+    a3.display();
+
+ 
+
+  }
+}
+
+
+output===>100,200
+
+
+-------oject of array-------------
+
+
+
+
+class Employee
+{
+  String name; 
+int Year;
+doublre salary;
+String address;
+
+ 
+
+Employee(String s, int y,int sal,int add)
+{
+    name=s;
+    year=y;
+    salary=sal;
+    adress=add;
+}
+  void display() 
+    {
+        System.out.println(name);
+       System.out.println(year);
+    System.out.println(salray);
+    System.out.println(address);
+      }
+
+ 
+
+}
+
+ 
+
+class Amain {
+  public static void main(String args[]) {
+
+ 
+
+Employee e[]=new employee[4];
+
+ 
+
+for(i=0;i<4;i++)   
+Employee e[i]=new Employee("Robert", 1997,2000,"abcd");  // here all employee object will have same values
+e[i].display();
+
+ 
+
+//
+
+ 
+
+}
+}
+
+
+class Employee {   String name;  int ... by Srilatha Manam
+Srilatha Manam
+15:09
+
+class Employee
+{
+  String name; 
+int Year;
+doublre salary;
+String address;
+
+ 
+
+Employee()
+{
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter employee name");
+    name=s.nextLine();
+    System.out.println("enter year");
+    year=s.nextInt();
+    System.out.println("enter employee salary");
+    salary=s.nextDouble();
+    System.out.println("enter Address");
+    address=s.next();
+}
+  void display() 
+    {
+        System.out.println(name);
+       System.out.println(year);
+    System.out.println(salray);
+    System.out.println(address);
+      }
+
+ 
+
+}
+
+ 
+
+class Amain {
+  public static void main(String args[]) {
+
+ 
+
+Employee e[]=new employee[4];
+
+ 
+
+for(i=0;i<4;i++)   
+Employee e[i]=new Employee();  // here all employee object will have same values
+e[i].display();
+
+ 
+
+//
+
+ 
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Assign and print the roll number, phone number and address of two students having names "Sam" and "John" respectively by creating two objects of class 'Student'.
+
+ 
+
+2. Write a program that would print the information (name, year of joining, salary, address) of three employees by creating a class named 'Employee'. The output should be as follows:
+Name        Year of joining        Address
+Robert            1994                64C- WallsStreat
+Sam                2000                68D- WallsStreat
+John                1999                26B- WallsStreat
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. ATM Simulator: Create a class called "Account" that represents a bank account. The class should have properties such as account number, balance, and account holder name, and methods such as deposit, withdraw and check balance. Create another class called "ATMSimulator" that represents an ATM machine. The class should have a list of accounts, and methods such as addAccount, removeAccount, and transact.
+
+ 
+
+2. Point of Sale System: Create a class called "Product" that represents a product. The class should have properties such as name, price, and quantity, and methods such as getName, getPrice and getQuantity. Create another class called "PointOfSale" that represents a point of sale system. The class should have a list of products, and methods such as addProduct, removeProduct, and getTotalCost.
+
+ 
+
+3. Restaurant: Create a class called "Dish" that represents a dish. The class should have properties such as name, ingredients, and price, and methods such as getName, getIngredients, and getPrice. Create another class called "Restaurant" that represents a restaurant. The class should have a list of dishes, and methods such as addDish, removeDish, and getTotalCost
+
+ 
+
+4. Library Management System: Create classes for "Book" and "Author" that represent books and authors in a library. The Book class should have properties such as title, author, ISBN, and publisher, and methods such as getTitle, getAuthor, and setAuthor. The Author class should have properties such as name, email, and a list of books, and methods such as getName, getEmail, and addBook.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://teams.microsoft.com/l/meetup-join/19%3ameeting_OWJjMjQxZDMtNzI3OS00YjQ0LWIxMzAtNTBmZDI1OGYxZDc1%40thread.v2/0?context=%7b%22Tid%22%3a%2244d8b453-bc45-44ea-ae2b-5c48de48fdf9%22%2c%22Oid%22%3a%22ead20fc1-fb5a-42d9-86a9-fd27ad1ad75e%22%7d
+
+
+ 

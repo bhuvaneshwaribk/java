@@ -1,0 +1,136 @@
+[10:04] Srilatha Manam
+
+Write a program that asks the user for their name and prints a personalized greeting message. Repeat this process five times using a loop.
+
+
+x=36;
+
+while(x<10)
+
+{
+
+x=x/7;
+
+System.out.println(x);
+
+}
+
+ result-->will not execute
+
+ 
+
+int p=-23
+
+for(;p>0;p++)
+
+{
+
+         p=p+45;
+
+}
+
+ result-->will not execute
+
+ 
+
+char ch=’a’
+
+switch(‘a’)
+
+{
+
+ 
+
+         case ‘b’:
+
+                            for(int m=789;m<0;m--)
+
+                            System.out.prinltn(m);
+
+                            break;
+
+         case ‘a’: 
+
+                            while(true)
+
+                            System.out.prinltn(“10”);
+
+                            break;
+
+         case ‘n’:
+
+                            for(;;)
+
+                            System.out.prinltn(“hai”);
+
+                            break;
+
+                            default:
+
+                                               for(;false;)
+
+                            System.out.prinltn(“45.67”);
+
+                            break;
+
+                   }
+
+
+
+
+
+
+
+
+Write a program that calculates the power of a number. Take two inputs from the user, the base number and the exponent, and calculate the result using a loop.
+
+
+
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+      long base, exponent;
+      Scanner s=new Scanner(System.in);
+      base=s.nextLong();
+      exponent=s.nextLong();
+      long power=1;
+      int j=1;
+      do
+      {
+       power=power *base;
+          j=j+1;
+      }
+      while(j<=exponent);
+      System.out.println(power);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Write a program that converts a decimal number to its binary representation. Use a loop to repeatedly divide the decimal number by 2 and keep track of the remainders.
+
+ 
+
+Factor Finder: Write a program that takes an input number from the user and prints all its factors using a loop. A factor is a number that divides another number without leaving a remainder.
+
+ 
+
+find the prime numbers in the range of m to n
+
+ 
+
+find the perfect numbers in the range of m to n

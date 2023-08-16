@@ -1,0 +1,527 @@
+[13:14] Srilatha Manam
+
+class Gpay
+
+{
+
+   int a;
+
+  static int b;
+
+static void  display1()
+
+  {
+
+    System.out.println(a);
+
+    System.out.println(b);
+
+  }
+
+  void display2()
+
+  {
+
+    System.out.println(a);
+
+    System.out.println(b);
+
+  }
+
+}
+
+[13:18] Srilatha Manam
+
+class Gpay
+
+{
+
+   int a;  // non-static variable
+
+  static int b; // static variable  
+
+static void  display1()  // static method
+
+  {
+
+   // System.out.println(a); it is invalid because we cannot acesses non-static variables
+
+    System.out.println(b);
+
+  }
+
+  void display2()  // non-static method
+
+  {
+
+    System.out.println(a);
+
+    System.out.println(b);
+
+  }
+
+}
+
+ 
+
+public class GpayMain {
+
+
+    }
+
+}
+
+[13:21] Srilatha Manam
+
+class Gpay
+
+{
+
+   int a;  // non-static variable
+
+  static int b; // static variable  
+
+static void  display1()  // static method
+
+  {
+
+      int temp=100;  // it will becie local variable  it is non-static
+
+   // System.out.println(a); it is invalid because we cannot acesses non-static variables
+
+    System.out.println(b);
+
+  }
+
+  void display2()  // non-static method
+
+  {
+
+    System.out.println(a);
+
+    System.out.println(b);
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ATM Simulator: Create a class called "Account" that represents a bank account. The class should have properties such as account number, balance, and account holder name, and methods such as deposit, withdraw and check balance. Create another class called "ATMSimulator" that represents an ATM machine. The class should have a list of accounts, and methods such as addAccount, removeAccount, and transact.
+
+
+
+
+class Account{
+
+public long acctNo;
+private double balance=20000;
+String acctHolderName;
+
+
+void desposit()
+{
+}
+
+void withdraw()
+{
+}
+
+double chekbalance()
+{
+}
+
+}
+
+class ATMSimulator{
+
+
+int arr[]=new int[10];
+for(int i=0;i<arr.length;i++)
+ arr[i]=addAccount(acctNo)
+
+
+void addAccount()
+{
+}
+
+void removeAccount()
+{
+}
+
+void transact()
+{
+}
+
+
+}
+
+
+
+
+Point of Sale System: Create a class called "Product" that represents a product. The class should have properties such as name, price, and quantity, and methods such as getName, getPrice and getQuantity. Create another class called "PointOfSale" that represents a point of sale system. The class should have a list of products, and methods such as addProduct, removeProduct, and getTotalCost.
+
+
+class Product{
+
+String name;
+double price;
+int quantity;
+
+String getName()
+{
+}
+
+double getPrice()
+{
+}
+
+int getQuantity()
+{
+}
+
+}
+
+class PointOfSale{
+
+void addProduct()
+{
+}
+
+void removeProduct()
+{
+}
+
+int getTotalCost()
+{
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[10:03] rambabu krishnavarapu (Guest)
+
+/*Point of Sale System: Create a class called "Product" that represents a product. The class should have properties such as name, price, and quantity, and methods such as getName, getPrice and getQuantity. Create another class called "PointOfSale" that represents a point of sale system. The class should have a list of products, and methods such as addProduct, removeProduct, and getTotalCost.*/
+
+
+import java.util.*;
+
+
+class Sale
+
+
+  {​​​​​
+
+
+    Scanner sc=new Scanner(System.in);
+
+
+    String pname;
+
+
+    double price;
+
+
+    int quan;
+
+
+    void details()
+
+
+    {​​​​​
+
+
+      System.out.println("enter product name");
+
+
+      pname=sc.nextLine();
+
+
+      System.out.println("enter product price");
+
+
+      price=sc.nextDouble();
+
+
+      System.out.println("enter product quantity");
+
+
+      quan=sc.nextInt();
+
+
+    }​​​​​
+
+
+    void getName()
+
+
+    {​​​​​
+
+
+      System.out.println("the product name"+pname);
+
+
+    }​​​​​
+
+
+    void getPrice()
+
+
+    {​​​​​
+
+
+      System.out.println("the product price"+price);
+
+
+    }​​​​​
+
+
+    void getQuantity()
+
+
+    {​​​​​
+
+
+      System.out.println("the product quantity"+quan);
+
+
+    }​​​​​
+
+
+  }​​​​​
+
+
+class Product
+
+
+  {​​​​​
+
+
+    public static void main(String args[])
+
+
+    {​​​​​
+
+
+      Sale p1=new Sale();
+
+
+      p1.details();
+
+
+      p1.getName();
+
+
+      p1.getPrice();
+
+
+      p1.getQuantity();
+
+
+      Sale p2=new Sale();
+
+
+      p2.details();
+
+
+      p2.getName();
+
+
+      p2.getPrice();
+
+
+      p2.getQuantity();
+
+
+
+    }​​​​​
+
+
+  }​​​​​
+
+
+[10:03] rambabu krishnavarapu (Guest)
+
+
+
+
+/*ATM Simulator: Create a class called "Account" that represents a bank account. The class should have properties such as account number, balance, and account holder name, and methods such as deposit, withdraw and check balance. Create another class called "ATMSimulator" that represents an ATM machine. The class should have a list of accounts, and methods such as addAccount, removeAccount, and transact.*/
+
+
+import java.util.*;
+ 
+class Account {​​​​​
+
+
+  Scanner sc = new Scanner(System.in);
+
+
+  String name;
+
+
+  long acnum;
+
+
+  private double bal;
+ 
+  void details() {​​​​​
+
+
+    System.out.println("enter user name:");
+
+
+    name = sc.next();
+
+
+    System.out.println("enter Account number: ");
+
+
+    acnum = sc.nextLong();
+
+
+    System.out.println("enter Account bal:");
+
+
+    bal = sc.nextDouble();
+
+
+  }​​​​​
+ 
+  void deposit() {​​​​​
+
+
+    double diposit;
+
+
+    System.out.println("enter deposit ammount: ");
+
+
+    diposit = sc.nextDouble();
+
+
+    bal = bal + diposit;
+
+
+  }​​​​​
+ 
+  void withdraw() {​​​​​
+
+
+    double withdraw;
+
+
+    System.out.println("enter withdraw ammount: ");
+
+
+    withdraw = sc.nextDouble();
+
+
+    bal = bal - withdraw;
+
+
+  }​​​​​
+ 
+  void checkbal() {​​​​​
+
+
+    System.out.println("the account balance is: " + bal);
+
+
+  }​​​​​
+ 
+  void display() {​​​​​
+
+
+    System.out.println("the Account Holder Name: " + name);
+
+
+    System.out.println("the Account Number: " + acnum);
+
+
+    System.out.println("the account balance is: " + bal);
+
+
+  }​​​​​
+
+
+}​​​​​
+ 
+class AtmSimulator {​​​​​
+
+
+  public static void main(String args[]) {​​​​​
+
+
+    Account ram = new Account();
+
+
+    ram.details();
+
+
+    ram.display();
+
+
+    ram.deposit();
+
+
+    ram.checkbal();
+
+
+    ram.withdraw();
+
+
+    ram.checkbal();
+
+
+    Account babu = new Account();
+
+
+    babu.details();
+
+
+    babu.display();
+
+
+    babu.deposit();
+
+
+    babu.checkbal();
+
+
+    babu.withdraw();
+
+
+    babu.checkbal();
+
+
+  }​​​​​
+
+
+}​​​​​

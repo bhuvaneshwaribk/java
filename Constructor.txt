@@ -1,0 +1,95 @@
+Constructor:
+
+
+
+class A
+{     
+       A(){
+        System.out.println("Hello, World!");
+        }
+}
+class B extends A{
+    B(){
+     System.out.println("Hello");
+    }
+}
+class Main{
+    public static void main(String q[]){
+        B b=new B();
+        
+    }
+}
+
+output:
+Hello, World!
+Hello
+
+-----------------------------------------------------
+
+
+class A
+{     
+       A(){
+        System.out.println("Hello, World!");
+        }
+}
+class B extends A{
+    B(int a){
+     System.out.println("Hello");
+    }
+}
+class Main{
+    public static void main(String q[]){
+        B b=new B(10);
+        
+    }
+}
+
+output:
+Hello, World!
+Hello
+
+-----------------------------------------------------
+
+class A
+{     
+       A(int a){
+        System.out.println("Hello, World!");
+        }
+}
+class B extends A{
+    B(){
+     System.out.println("Hello");
+    }
+}
+class Main{
+    public static void main(String q[]){
+        B b=new B(10);
+        
+    }
+}
+
+output:error
+
+--------------------------------------------------------
+
+class A
+{     
+       A(int a){
+        System.out.println("Hello, World!");
+        }
+}
+class B extends A{
+    B(){
+     System.out.println("Hello");
+    }
+}
+class Main{
+    public static void main(String q[]){
+        B b=new B();
+        
+    }
+}
+
+output:error
+--------------------------------------------------------

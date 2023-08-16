@@ -1,0 +1,288 @@
+create student class includes property roll number, name
+and methods to get student details
+
+
+
+
+
+Create a class calculator that will perform any arithmetic operations over two variables.  Build menu based application like:
+
+Addition
+Subtract
+Multiplication
+Division
+Remainder
+
+Write a main class that promotes user to create ‘n’ objects , for each object allow the user to choose one of the operation.
+
+
+
+import java.util.*;
+
+class Calculator{
+int a,b;
+
+void add(int a, int b){
+this.a=a;
+this.b=b;
+System.out.println(this.a+this.b);
+}
+
+void subtract(int a,int b){
+this.a=a;
+this.b=b;
+System.out.println(this.a-this.b);}
+
+void multiply(int a,int b){
+this.a=a;
+this.b=b;
+System.out.println(this.a*this.b);}
+
+void division(int a,int b){
+this.a=a;
+this.b=b;
+System.out.println(this.a/this.b);}
+
+}
+
+
+class main{
+public static void main(String args[]){
+
+Scanner sc=new Scanner(System.in);
+char ch1;
+
+System.out.println("enter a and b value");
+
+int a=sc.nextInt();
+int b=sc.nextInt();
+
+System.out.println("enter no of object to be created");
+int o=sc.nextInt();
+
+Calculator c[]=new Calculator[n];
+
+for(int i=0;i<n;i++){
+ c[i]=new Calculator();
+}
+
+do{
+
+for(int k=0;k<n;k++)
+{
+System.out.println("1.addition");
+System.out.println("2.Subtraction");
+System.out.println("3.multiplication");
+System.out.println("4.division");
+System.out.println("enter your choice");
+
+int ch=sc.nextInt();
+
+switch(ch){
+
+case 1:
+       c[k].add(a,b);
+       break;
+case 2:
+      c[k].subtract(a,b);
+      break;
+case 3:
+      c[k].multiply(a,b);
+      break;
+case 4:
+      c[k].division(a,b);
+       break;
+default:
+    System.out.println("enter valid choice");
+     
+
+}
+System.out.println("do you want to continue enter y/n");
+ch1=sc.next().charAt(0);
+
+}while(ch1!='n');
+
+}
+
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//encapsulation without security
+
+class Owner {
+  public int key = 4444;
+
+ 
+
+  void openDoor() {
+    System.out.println("enter key to open door");
+    System.out.println(key);
+  }
+
+ 
+
+}
+
+ 
+
+class Neighbor {
+  void getkey() {
+    Owner o = new Owner();
+    System.out.println(o.key);
+  }
+}
+
+ 
+
+class Encapsulation {
+
+ 
+
+  public static void main(String l[]) {
+    Owner o = new Owner();
+    o.openDoor();
+    Neighbor n = new Neighbor();
+    n.getkey();
+
+ 
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+[16:59] Srilatha Manam
+
+class Owner {
+
+  private int key;
+
+ 
+
+  public int getKey() {
+
+    return key;
+
+  }
+
+ 
+
+  public void setKey(int key) {
+
+    this.key = key;
+
+  }
+
+ 
+
+  void openDoor() {
+
+    System.out.println("enter key to open door");
+
+    System.out.println(this.key);
+
+  }
+
+ 
+
+}
+
+ 
+
+class Neighbor {
+
+ 
+
+  public static void main(String l[]) {
+
+    Owner o = new Owner();
+
+    o.setKey(4444);
+
+    o.openDoor();
+
+    System.out.println(o.getKey());
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+ATM Simulator: Create a class called "Account" that represents a bank account. The class should have properties such as account number, balance, and account holder name, and methods such as deposit, withdraw and check balance. Create another class called "ATMSimulator" that represents an ATM machine. The class should have a list of accounts, and methods such as addAccount, removeAccount, and transact.
+
+ 
+
+2. Point of Sale System: Create a class called "Product" that represents a product. The class should have properties such as name, price, and quantity, and methods such as getName, getPrice and getQuantity. Create another class called "PointOfSale" that represents a point of sale system. The class should have a list of products, and methods such as addProduct, removeProduct, and getTotalCost.
+
+ 
+
+3. Restaurant: Create a class called "Dish" that represents a dish. The class should have properties such as name, ingredients, and price, and methods such as getName, getIngredients, and getPrice. Create another class called "Restaurant" that represents a restaurant. The class should have a list of dishes, and methods such as addDish, removeDish, and getTotalCost
+
+ 
+
+4. Library Management System: Create classes for "Book" and "Author" that represent books and authors in a library. The Book class should have properties such as title, author, ISBN, and publisher, and methods such as getTitle, getAuthor, and setAuthor. The Author class should have properties such as name, email, and a list of books, and methods such as getName, getEmail, and addBook.
+
+ 
+
+5. Bank Account: Create a class called BankAccount that has properties such as account number, balance, and account holder name. Create subclasses such as CheckingAccount, SavingAccount and CreditAccount that inherit from BankAccount and add additional properties such as interest rate or credit limit. Create methods to deposit and withdraw money, check the balance and return the account details in the parent class, and override them in the subclasses to implement specific behavior for each account type.
+
+ 
+
+6. Shapes: Create a class called Shape that has properties such as color and a method to calculate the area. Create subclasses such as Rectangle, Triangle, and Circle that inherit from Shape and override the area calculation method. Create a class called ShapeTester that creates objects of the different shape classes and calls the area calculation method on them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

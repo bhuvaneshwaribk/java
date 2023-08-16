@@ -1,0 +1,96 @@
+Write a java program to calculate Sum of Two matrices
+Write a java program to calculate Subtraction of Two matrices
+Write a java program to Multiplication of Two matrices
+Write a java program to print diagonal elements of a matrix
+Write a java program to print upper triangle of a matrix
+WritWrite a java program to calculate Sum of Two matrices
+Write a java program to calculate Subtraction of Two matrices
+Write a java program to Multiplication of Two matrices
+Write a java program to print diagonal elements of a matrix
+Write a java program to print upper triangle of a matrix
+Write a java program to print upper triangle of a matrixe a java program to print upper triangle of a matrix
+
+
+2DArray:
+
+datatype arrayname[][]=new datatype[no.of row][no.of column];
+
+
+
+
+
+
+
+
+
+[15:41] Srilatha Manam
+
+import java.util.*;
+
+class Array2D
+
+{
+
+public static void main(String l[])
+
+{
+
+// create an 2D array with rows and colo
+
+int row,col;  // 
+
+Scanner s=new Scanner(System.in);
+
+System.out.println("enter number of rows and col");
+
+row=s.nextInt();
+
+col=s.nextInt();
+
+ 
+
+int [][]matrix=new int[row][col];
+
+ 
+
+for(int r=0;r<row;r++) // for travell over rows 
+
+{
+
+    for(int c=0;c<col;c++)   // for travell over coloumns
+
+    {
+
+        matrix[r][c]=s.nextInt();
+
+    }
+
+ 
+
+}
+
+ 
+
+ 
+
+for(int r=0;r<row;r++) // for travell over rows 
+
+{
+
+    for(int c=0;c<col;c++)   // for travell over coloumns
+
+    {
+
+        System.out.print(matrix[r][c]+" ");
+
+    }
+
+    System.out.println();
+
+ 
+
+}
+
+}
+
+}

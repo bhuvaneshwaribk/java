@@ -1,0 +1,99 @@
+import java.util.*;
+class sample1{
+  public static void main(String arg[]){
+    
+    function();
+    
+  }
+ static void function(){
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter username");
+   String str=sc.nextLine();
+   System.out.println("enter password");
+   String str1=sc.nextLine();
+   boolean flag=checkUsername(str);
+   if(flag==true)
+     System.out.println("valid username");
+   else
+     System.out.println("invalid username");
+   boolean falg1=checkPassword(str1);
+   if(flag==true)
+     System.out.println("valid password");
+   else
+     System.out.println("invalid password");
+  }
+
+  
+  
+  static boolean checkUsername(String s){
+    for(int i=0;i<=9;i++){
+      String a=Integer.toString(i);
+      if(s.contains(a)){
+        return true;
+       } 
+      }
+
+    for(int j=65;j<=90;j++){
+        char c=(char)j;
+        String b=Character.toString(c);
+        if(s.contains(b)){
+          return true;
+        }
+      }
+    for(int j=97;j<=122;j++){
+        char c=(char)j;
+        String b=Character.toString(c);
+        if(s.contains(b)){
+          return true;
+        }
+      }
+    for(int i=32;i<=43;i++){
+      char c=(char)i;
+      String b=Character.toString(c);
+      if(s.contains(b)){
+        return true;
+      }
+    }
+    if(s.contains(" "))
+    return false;
+
+  return false;
+  }
+
+
+  
+  static boolean checkPassword(String s1){
+    for(int i=0;i<=9;i++){
+      String a=Integer.toString(i);
+      if(s1.contains(a)){
+        return true;
+       } 
+      }
+
+    for(int j=65;j<=90;j++){
+        char c=(char)j;
+        String b=Character.toString(c);
+        if(s1.contains(b)){
+          return true;
+        }
+      }
+    for(int j=97;j<=122;j++){
+        char c=(char)j;
+        String b=Character.toString(c);
+        if(s1.contains(b)){
+          return true;
+        }
+      }
+    for(int i=32;i<=43;i++){
+      char c=(char)i;
+      String b=Character.toString(c);
+      if(s1.contains(b)){
+        return true;
+      }
+    } 
+  if(s1.contains(" "))  
+   return false;
+    
+return false;
+}
+}

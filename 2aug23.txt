@@ -1,0 +1,249 @@
+import java.util.*;
+class Student{
+
+int rollno;
+double averege;
+void showAverage()
+{
+ System.out.println(rollno+"average is"+averege);
+
+}
+
+}
+
+class BtechClass extends Student{
+
+
+void classAvg()
+{
+
+}
+
+}
+class SingleInheritence{
+
+public static void main(String args[]){
+
+Scanner sc=new Scanner(System.in);
+
+BtechClass b=new BtechClass();
+b.rollno=sc.nextInt();
+b.averege=sc.nextDouble();
+b.showAverage();
+b.classAvg();
+
+}
+}
+
+
+
+-------------------------------------------------
+
+import java.util.*;
+class Student{
+
+int rollno;
+double averege;
+
+Student(){
+    System.out.println("enter roll number");
+    
+     Scanner sc=new Scanner(System.in);
+     rollno=sc.nextInt();
+     averege=sc.nextDouble();
+}
+
+
+
+
+void showAverage()
+{
+ System.out.println(rollno+"average is"+averege);
+
+}
+
+}
+
+class BtechClass extends Student{
+
+
+void classAvg(double sum)
+{
+  
+  sum+=sum/3;
+  System.out.println("class averege"+sum);
+}
+
+}
+
+class SingleInheritence{
+
+public static void main(String args[]){
+
+
+BtechClass b=new BtechClass();
+b.showAverage();
+//b.classAvg();
+
+BtechClass b1=new BtechClass();
+b1.showAverage();
+//b1.classAvg();
+
+BtechClass b2=new BtechClass();
+b2.showAverage();
+//b2.classAvg();
+double sum=b.averege+b1.averege+b2.averege;
+b.classAvg(sum);
+//b1.classAvg(sum);
+//b2.classAvg(sum);
+}
+}
+
+
+----------------------------------------------------
+
+
+classAvg() is comman for all student to do that we make use of static keyword:
+
+import java.util.*;
+class Student{
+
+int rollno;
+double averege;
+
+Student(){
+    System.out.println("enter roll number");
+    
+     Scanner sc=new Scanner(System.in);
+     rollno=sc.nextInt();
+     averege=sc.nextDouble();
+}
+
+
+
+
+void showAverage()
+{
+ System.out.println(rollno+"average is"+averege);
+
+}
+
+}
+
+class BtechClass extends Student{
+
+
+static void classAvg(double sum)
+{
+  
+  sum+=sum/3;
+  System.out.println("class averege"+sum);
+}
+
+}
+
+class SingleInheritence{
+
+public static void main(String args[]){
+
+
+BtechClass b=new BtechClass();
+b.showAverage();
+
+BtechClass b1=new BtechClass();
+b1.showAverage();
+
+BtechClass b2=new BtechClass();
+b2.showAverage();
+
+double sum=b.averege+b1.averege+b2.averege;
+BtechClass.classAvg(sum);
+
+}
+}
+
+
+
+----multi level inheritence-----
+import java.util.Scanner;
+
+/*create a class Petroleum have data members with price and quality of  Petroleum liquid. Assume starting  1 liter Petroleum liquid is Rs.20. Extend this class by India with method addGst() will add 30%gst to basic 1 liter Petroleum liquid. Further extend India class by States class have its own method call finalPrice() , this method gives final price of liter Petroleum liquid based on number of liters with following condition. */
+
+class Petroleum{
+  double price=20;
+  int quantity;
+
+  Petroleum(){
+    System.out.println("enter no of litters of petrol");
+    Scanner sc=new Scanner(System.in);
+    quantity=sc.nextInt();
+  }
+}
+class India extends Petroleum{
+  float gst;
+  void addGst(){
+    gst=0.3f;
+    gst=gst*quantity;
+    System.out.println("gst= "+gst);
+  }
+}
+
+class State extends India{
+  void finalprice(){
+    float finalPrice=20*quantity+gst;
+    System.out.println("final price = "+finalPrice);
+ }
+}
+class PetroleumMain{
+  public static void main(String args[]){
+    
+   State s=new State();
+    s.addGst();
+    s.finalprice();
+  }
+}
+
+
+
+-----heirarchal inheritence-----
+import java.util.Scanner;
+
+/*create a class Petroleum have data members with price and quality of  Petroleum liquid. Assume starting  1 liter Petroleum liquid is Rs.20. Extend this class by India with method addGst() will add 30%gst to basic 1 liter Petroleum liquid. Further extend India class by States class have its own method call finalPrice() , this method gives final price of liter Petroleum liquid based on number of liters with following condition. */
+
+class Petroleum{
+  double price=20;
+  int quantity;
+
+  Petroleum(){
+    System.out.println("enter no of litters of petrol");
+    Scanner sc=new Scanner(System.in);
+    quantity=sc.nextInt();
+  }
+}
+class India extends Petroleum{
+  float gst;
+  void addGst(){
+    gst=0.3f;
+    gst=gst*quantity;
+    System.out.println("gst= "+gst);
+  }
+}
+
+class State extends Petroleum{
+  void finalprice(){
+    float finalPrice=20*quantity;
+    System.out.println("final price = "+finalPrice);
+ }
+}
+class PetroleumMain{
+  public static void main(String args[]){
+    
+   State s=new State();
+    s.addGst();
+    s.finalprice();
+  }
+}
+
+
+
+

@@ -1,0 +1,266 @@
+String in java: is predifined class in java
+String: is collection of charcters
+
+String literal/string constant:collection of charcters enclosed in double quotes
+
+Why we need Strings:
+-we can store multiple charecters
+-we can sotre differnt type of charcter
+-we don't need to specify size
+
+What are the different classes are available in java for creating string object:
+1.String class
+2.String Buffer class
+3.String Builder class
+
+this class are in package --> java.lang.*;
+this package is automatical imported
+
+How to create String object:
+
+1.creating String object using literal
+Syntax:
+string name="----"; //"---" String literal i.e string literal
+
+String String1="teckworks"
+
+String ---> pre-defined class
+String1---> string object
+teckworks--> string literal
+
+2.creating String object using String class
+
+Syntax:
+Syntax:  String name= new String();  // String is an predefined class
+
+example:
+String String1=new String("Teckworks");
+
+String String1=new String();
+String1="teckworks";
+
+ 
+differnce detween String literal and String class:
+
+case 1:--->using string literal
+String str1="teckwork";
+String str2="teckworks";
+
+case 2:---->using string class
+String str1=new String("teckwork");
+String str2=new String("teckworks");
+
+
+- if we create obj using string literal then it store at string constant pool(SCP)
+- if we create obj using string class then it is stored in heap
+- SCP is also part of heap area 
+- in string literal memory is allocated based on string literal
+
+
+Difference between SCP and Heap
+- if we create obj using string literal then it store at string constant pool(SCP)
+- if we create obj using string class then it is stored in heap
+- SCP is also part of heap area 
+- in string literal memory is allocated based on string literal
+
+
+
+What is the nature of string:
+immutable-->unchangeable value
+
+
+Why strings are immutable:
+because memory location may be pointed by more then one obj
+
+how to get data from String:
+- to get individual charcter use chacter type array
+- to get words from string use string type of array
+
+
+String predefined methods:
+
+1) String Length():
+   stringobject.length();
+   return integer value
+2) String concatenation
+   Stringobject.concat("String literal")
+   return string
+
+example:
+String s="hai"
+s.concat("hello")
+output--> haihello
+
+"hello".concat(s)
+output-->hellohai
+
+3)charcter extraction:
+i) charAt(index):
+ return single charcter
+ parameter is index value
+
+ii) toCharArry(): --->it convert string into character array
+    return character array
+Arrays.toString(array name)------>to convert charcter array into String array
+
+4) String comparsion:
+we need 2 strings
+
+4.1)compareTo():
+
+
+     compareTo
+    // syntax: string1.comapreTo(string2)
+    // comapte to methods retuns value as 0// -ve // +ve
+    System.out.println(s1.compareTo(s2));
+    System.out.println(s2.compareTo(s1));
+
+---both string are equal gives value =>0
+---both string are not equal gives values=> not equal to zero
+
+4.2) == operator
+
+return true or false
+
+    == operator // return value as true /false
+    //== opeartor always check the address
+
+ 
+
+    // strng1==string2
+    System.out.println(s1 == s2); // if s1=hello , s2=hello  --> flase
+    // is s1=s && s2=s s1==s2---> flase
+
+ 
+
+    String s3 = "hello";
+    String s4 = "hello";
+    System.out.println(s3 == s4);   //--> true
+
+
+
+
+4.3) equals()
+
+return true/false
+it will campare value of string
+both upper and lower case are treated as different
+1 arguments-->string 
+Syntax:
+string1.equals(string2)
+
+4.4) equalsIgnoreCase()
+return true/false
+it ignore upper and lower case
+
+4.5)startsWith()---> to check wheather the string is a strated with a specific pattern---> true/flase
+str.startsWith("pattern")
+ 
+
+4.6) endsWith()---> to check wheather the string is ending with a specific pattern---> true/flase
+str.endSwith("pattern")
+
+
+5)search
+
+5.1) indexOf()
+return-->inndex value of given pattern
+str.indexOf("pattern","starting index value")
+
+starting index value--->is optional
+
+5.2)lastIndexOf()
+return index value
+it will check from last index if it finds pattern it print index value of that
+str.lastIndexOf("pattern","starting index value")
+starting index value--> is optional if give value for this, pattern searching start from that index,it is last index
+
+example:
+input--->circket circket
+str.lastIndexOf("e")
+output---> 13
+even 2 'e' in string it consider from last
+
+input--->circket circket
+str.lastIndexOf("e",7)
+output---> 5
+last index is upto 7 but real last index is14 but we have given value as 7 thats way last index is 7
+
+5.3)contains()
+return true/false
+str.contains("pattern")
+
+6) Modifiy String
+
+6.1)substring()
+return string
+str.substring(begining index,ending index)
+
+
+6.2)replace()
+str.replace("pattern","pattern")
+return string
+
+6.3)trim()
+str.trim()
+return string
+remove space
+
+
+
+
+
+
+
+
+
+
+
+String buffer class
+String Builder class
+String Buffer class methods
+String vs String Buffer Vs String Builder
+String tokenizer class 
+
+
+
+
+[16:10] Srilatha Manam
+
+Simple Programs:
+
+Write a java program to find length of a string.
+
+Write a java program to concatenate one string with other string.
+
+Write a java program to find two  strings using compareTo().
+
+Write a java program to find two  strings using == operator.
+
+ 
+
+Practice programs:
+
+Write a java program to find number of words in a given string.
+
+Write a java program to find number of characters in a given string.
+
+Write a java program to display first character of every word in a given string.
+
+Write a java program to display first  & last character of every word in a given string.
+
+Write a java program to capitalize first character of every word in a given string.
+
+Write a java program to display longest word and smallest word in a given string.
+
+Write a java program to find length  of every word in a given string.
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,113 @@
+Array Opertion
+
+1] INSERTION
+
+i) Replace index value
+
+arr={31,1,5,9,6,9,4}
+arr[2]=100
+arr={31,1,100,9,6,9,4}
+
+ii) Shift all elements to right side with one position
+arr={31,1,5,8,6,9,4}
+arr[7]=arr[6]
+arr[6]=arr[5]
+arr[5]=arr[4]
+arr[4]=arr[3]
+arr={31,1,5,8,8,6,9,4}
+
+> only value i.e 8 is copied from index 3 to index 4 still value i.e 8 is avaliable at index 3
+> we should start shifting from last index if shift from the index we want to insert then data at other index is replaced
+
+
+pos--> is position at which we have to insert
+n--> size of array
+for(int k=n-2;k>=pos;k++)
+ arr[k+1]=arr[k]
+
+example:
+
+arr={4,9, , ,}
+insert 19 at index '0'
+arr[3]=arr[2]
+arr[2]=arr[1]
+arr[1]=arr[0]
+arr[0]=19
+arr={19,4,9, }
+
+
+arr={4,9,12,6}
+insert 19 at index '1'
+arr[3]=arr[2]
+arr[2]=arr[1]
+arr[1]=19
+arr={4,19,9,12}
+
+
+disadvantages:
+
+1.if ther are no empty cell data will be lost
+2.more shift operation
+  n-1-pos times shift opertion should be peformed 
+
+
+
+DELETION:
+
+arr={1,2,3,4,5}
+delete value at index 2
+arr[2]=arr[3]
+arr[3]=arr[4]
+
+arr={1,2,4,5,5}
+
+advantage:
+>more then one value can be stored
+>arrays are best if we want to perform more search opertion 
+
+disadvantage:
+>we can able to store similar data type values only
+>take more shift opertion during insertion and deletion
+>all elements stored in continous memory location
+
+insertion disadvatage:
+ther is looss of data in the
+
+deletion disadvantage:
+data is not realy deleted from memory
+
+
+
+
+
+
+
+
+Write a Java program to find the maximum and minimum elements in an array.
+Write a java program to find the sum of all array elements
+ Write a java program to count the total number of even and odd elements in an array.
+Write a java program to count the total number of negative elements in an array.
+Write a java program to reverse the array elements.
+Write a java program to copy all elements from one array to another array.
+ Write a java program to delete an element from an array at a specified position.
+Write a java  to Print the Alternate Elements in an Array
+Write a Java program to find the index of an array element.
+Write a Java program to insert an element (specific position) into an array.
+Write a Java program to find the common elements between two arrays
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

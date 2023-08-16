@@ -1,0 +1,153 @@
+Array from calling function to called funcation
+
+
+calling funcation:
+funcation_name(array_name,size of array)
+
+called function:
+funcation_name(datatype array_name[],int size)
+
+
+
+
+class x
+
+{ 
+
+    public static void main()
+
+        {     
+
+
+        int s[]={43, 56, 90,1,134};
+
+            x bj=new x();        
+
+            obj.calculate(s,5);  // calling function with an arra
+
+            for(int k=0;k<y;k++)
+
+            s.o.p(s[k]);
+
+        }        
+
+ 
+
+        void  calculate (int s[],int y)
+
+        {
+
+            for(int b=0;b<y;b++)
+
+            s[b]=s[b]+1;
+
+
+             for(int k=0;k<y;k++)
+
+            s.o.p(s[k]);
+
+        }
+
+ 
+
+
+
+        }
+
+
+
+only array name without brackets[] indicates starting address of array
+it is referenced by called fnction
+
+
+
+
+
+
+import java.sql.Array;
+import java.util.*;
+
+ 
+
+class Test1 {
+  public static void main(String[] args) {
+    int n;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter size of array");
+    n = sc.nextInt();
+    int array[] = new int[n];
+    System.out.println("Enter values of array");
+    for (int p = 0; p < n; p++)
+      array[p] = sc.nextInt();
+    Test1 t = new Test1();
+    for (int i = 0; i < n; i++)
+      System.out.println(" " + array[i]);
+
+      t.reverse(array);  //   just we sending array i.e starting address
+    for (int i = 0; i < n; i++)
+      System.out.print(" " + array[i]);
+  }
+void reverse(int arr[])
+  {
+    // to know no of elements in an array
+    // operator---> length  used for arrays
+    // arrayname.length
+    //length()--> used of string
+    for(int i=0;i<arr.length/2;i++)
+      {
+        int h=arr[i];
+        arr[i]=arr[arr.length-1-i];   // n-1-i
+        arr[arr.length-1-i]=h;
+      }
+   // for(i=0;i<arr.length;i++)
+    //System.out.print(" " + arra[i]);
+  }
+
+ 
+
+}
+
+
+has context menu
+Compose
+
+
+
+
+In main method read array value call user defind function validate with array inside validate check each array value is -ve or not if array element is -ve change that value to zero display result array in main method
+
+
+[15:40] Srilatha Manam
+
+Why we need 2D Array
+
+how to declare 2D array
+
+How to allocate memory for 2D Array
+
+Ho to give data for 2D Array
+
+How to acesses 2D array elements
+
+
+
+
+
+
+
+
+
+
+
+[15:44] Srilatha Manam
+
+write the java program to rearrange array elements like place all odd numbers first and then even numbers
+
+ 
+
+Write the program to read array with combination of 2, 1, 0 values and rearrange array as:
+
+all 2's  all 0's all 1's
+
+
+

@@ -1,0 +1,433 @@
+*. ATM Simulator: Create a class called "Account" that represents a bank account. The class should have properties such as account number, balance, and account holder name, and methods such as deposit, withdraw and check balance. Create another class called "ATMSimulator" that represents an ATM machine. The class should have a list of accounts, and methods such as addAccount, removeAccount, and transact.*/
+import java.util.*;
+
+ 
+
+class Account {
+  Scanner sc = new Scanner(System.in);
+  int acno;
+  double bal;
+  String cname;
+
+ 
+
+  void details() {
+    System.out.println("enter the Account Holder name");
+    cname = sc.nextLine();
+    System.out.println("enter the Account Number");
+    acno = sc.nextInt();
+    System.out.println("enter Balance");
+    bal = sc.nextDouble();
+  }
+
+ 
+
+  void deposit() {
+    System.out.println("enter deposite ammount");
+    int amount = sc.nextInt();
+    bal = bal + amount;
+    System.out.println("balance after deposite " + bal);
+  }
+
+ 
+
+  void withdraw() {
+    System.out.println("enter withdraw amount");
+    int withdraw = sc.nextInt();
+    if (bal < withdraw)
+      System.out.println("Insufficent balance");
+    else {
+      bal = bal - withdraw;
+      System.out.println("the bal after withdraw " + bal);
+    }
+
+ 
+
+  }
+
+ 
+
+  void checkbalance() {
+    System.out.println("the balnce of ACCOUNT number " + acno + " is :" + bal);
+  }
+}
+
+ 
+
+class ATMSimulator extends Account {
+
+ 
+
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter the number of accounts");
+    int n = sc.nextInt();
+    ATMSimulator arr[] = new ATMSimulator[n];
+    for (int i = 0; i < n; i++) {
+      arr[i] = new ATMSimulator();
+      arr[i].details();
+      arr[i].deposit();
+      arr[i].checkbalance();
+      arr[i].withdraw();
+      arr[i].checkbalance();
+    }
+    ATMSimulator a = new ATMSimulator();
+    a.listofaccounts(arr);
+    a.addAccount(arr);
+    a.removeAccount(arr);
+  }
+
+ 
+
+  void listofaccounts(ATMSimulator arr[]) {
+    System.out.println("the list of accounts");
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i].cname);
+      System.out.println(arr[i].acno);
+      System.out.println(arr[i].bal);
+    }
+  }
+
+ 
+
+  void addAccount(ATMSimulator arr[]) {
+    System.out.println("enter the account details do you want to enter");
+    ATMSimulator newacount = new ATMSimulator();
+    newacount.details();
+    arr[arr.length - 1] = newacount;
+    ATMSimulator a2 = new ATMSimulator();
+    a2.listofaccounts(arr);
+
+ 
+
+  }
+
+ 
+
+  void removeAccount(ATMSimulator arr[]) {
+    System.out.println("enter which ac do you want to delete");
+    int pos = sc.nextInt();
+    for (int i = pos; i < arr.length - 1; i++) {
+      arr[i] = arr[i + 1];
+    }
+    System.out.println("acounts after deletion");
+    /*
+     * for (int i = 0; i < arr.length - 1; i++) {
+     * System.out.println(arr[i].details());
+     */
+    // ATMSimulator a1 = new ATMSimulator();
+    // for(int i=0;i<arr.length-1;i++){
+    // a1.listofaccounts(arr[i]);
+    for (int i = 0; i < arr.length - 1; i++) {
+      System.out.println("the acount holder name :" + arr[i].cname);
+      System.out.println("Account number :" + arr[i].acno);
+      System.out.println("Account Balance :" + arr[i].bal);
+      // a1.listofaccounts(arr);;
+    }
+
+ 
+
+  }
+
+ 
+
+}
+
+
+
+1)a person want travel from benglore to delhi he want travelling expansive in differnt mode
+
+
+--------------------INVALID OVERLOADING-----------------------------
+class transport{
+
+void travel(int a){
+System.out.println("bus price =5000");
+
+}
+void travel(int b){
+
+System.out.println("car price =10000");
+
+}
+
+void travel(int c){
+System.out.println("train price =2000");
+
+}
+void travel(int d){
+System.out.println("plane price =50000");
+
+}
+
+}
+
+class Main{
+public static void main(String args[]){
+transport t=new transport();
+Scanner sc=new Scanner(System.in);
+int a=sc.nextInt();
+t.travel(a);
+
+
+}
+}
+
+---------------------------------------------------------
+
+
+
+class transport{
+
+ 
+
+ 
+
+void travel(String bus)-----> 1
+{
+System.out.println("price =5000");
+
+ 
+
+ 
+
+}
+
+ 
+
+ 
+
+void travel(String train, String p)----> 2
+{
+System.out.println("price =2000");}
+void travel(int train, double p)----> 3
+{
+System.out.println("price =2000");}
+
+ 
+
+void travel(double train, int p)----> 4
+{
+System.out.println("price =2000");}
+
+ 
+
+}
+
+ 
+
+ 
+
+class Main{
+public static void main(String args[]){
+transport t=new transport();
+Scanner sc=new Scanner(System.in);
+String a=sc.next();
+t.travel("a,"b");  ---> 2
+t.travel(10,2.3);----> 3
+t.reavel(90.2,1)---> 4
+t.travel(10);---> error
+t.travel("p")----> 1
+
+ 
+
+ 
+
+}
+}
+-------------------------------------
+
+using same method name more than one time by diffrentiating with paramets
+
+----> by data type
+----> by order
+
+----> no of paramets
+
+overloading applied inside only one class
+
+
+
+-------------OVERRIDDING--------------
+class Mother
+{
+    void prepareFood()
+    {
+        System.out.println("prapare food for lunch");
+    }
+}
+
+ 
+
+class Daughter extends Mother
+{
+    void prepareFood()
+    {
+        System.out.println("i am preparing Dal");
+    }
+
+ 
+
+}
+
+ 
+
+class Son extends Mother
+{
+    void prepareFood()
+    {
+        System.out.println("i am preparing rice");
+    }
+
+ 
+
+}
+
+ 
+
+class Family
+{
+public static void main(String l[])
+{
+    Mother m=new Mother();
+    m.prepareFood();
+    Daughter d=new Daughter();
+    d.prepareFood();
+    Son s=new Son();
+    s.prepareFood();
+}
+}
+
+----------------super keyword-------------------
+
+
+Super keywprd is used to call hidden parent methods in child class:
+
+
+class First
+
+{
+
+    int x=10;
+
+    void display()
+
+    {
+
+        System.out.println("x="+x);
+
+    }
+
+}
+
+class Second extends First
+
+{
+
+    int x=40;
+
+    void display()
+
+    {
+
+    super.display();  ---> it will call super class display() hidden in child class
+
+        System.out.println("x="+x);  ---> x=40
+
+     System.out.println("x="+super.x);---> x=10
+
+    }
+
+}
+
+class Main4
+
+{
+
+public static void main(String l[])
+
+{
+
+    Second s=new Second();
+
+    s.display();  // child class display method
+
+
+}
+
+}
+
+-------------super key word to call parent class constructor------------
+class First
+{
+    int x=10;
+    First()
+    {
+        System.out.println("i am super class constructor");
+    }
+    void display()
+    {
+        System.out.println("x="+x);
+    }
+}
+class Second extends First
+{
+    int x=40;
+    Second()
+    {
+        super(); // call super class conctructor 
+    }
+    void display()
+    {
+
+    super.display();   // calling super class method
+        System.out.println("x="+x);
+     System.out.println("x="+super.x);
+    }
+}
+class Main4
+{
+public static void main(String l[])
+{
+    Second s=new Second();
+    s.display();  
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+create cls arithmatic having method calculate extend this cls by cls additio subtraction multiplication division overidide calculate method to perform operation b/w two variables.
+
+
+
+Design a system for a vehicle rental company that offers different types of vehicles: Car, Motorcycle, and Truck. Each vehicle type has a method calculateRentalCost() that calculates the rental cost based on factors like rental duration and vehicle type. Implement the class hierarchy and demonstrate method overriding for the calculateRentalCost() method.
+
+ 
+
+ 
+
+Create a hierarchy of shapes: Shape, Circle, and Rectangle. Each shape should have a method calculateArea() that calculates its area. Override the calculateArea() method in the subclasses to provide specific implementations for circles and rectangles.
+
+ 
+
+Design a class structure for an online marketplace platform with different types of products: Electronics, Clothing, and Books. Each product type has a method calculateShippingCost() that computes the shipping cost based on their dimensions and weight. Implement the class hierarchy and demonstrate method overriding for the calculateShippingCost() method.
+
+
+

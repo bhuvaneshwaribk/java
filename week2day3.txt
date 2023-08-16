@@ -1,0 +1,338 @@
+---------tokens--------
+1.keywords
+2.identifiers
+3.literals
+  i.integer constent 
+  ii.real constant
+  iii.charcter constents ex: 'B'
+  iv.string constant ex: "Bhuvi"
+
+// keyword are : class public  static void  double  int 
+class HelloWorld {  // Helloworld name is class name
+    public static void main(String[] p) {  // p is object name
+       double k=90;  // k& p$ avraivle name
+       int p$=40;
+       System.out.println(k);  
+       System.out.println(p$);
+       void calculate()  // calcuate is mtheod name
+       {
+
+       }
+       }
+
+    }
+}
+
+
+
+
+class HelloWorld {  
+
+    public static void main(String[] p) {  
+
+       double k ;   // double varaible
+
+       int p$;   // integer varaible
+
+       String iplteamname;  // String variable / string object
+
+       char Tength_grade;  // charater varaible
+
+       k=8.0;  // 8.0 is an real const
+
+       p$=8;  // 8 integer const
+
+       iplteamname="8";   //"8"  string const
+
+       Tength_grade='8';  // '8'  character cont
+
+       System.out.println(k);  
+
+       System.out.println(p$);
+
+       System.out.println(iplteamname);
+
+       System.out.println(Tength_grade);
+
+
+    }
+
+}
+
+example
+
+" " -string const
+' ' -charcter const
+'10' -invalid char const
+"10" -striing const
+ 10 -integer
+ 10.0 -real
+ "x" -string
+'x' -char
+x -identifier 
+
+
+how to declare variable..?
+
+datatype   variable_name
+
+varibles used to give i/p 
+value of variables can be changed
+
+variable intialization/definition:
+double k;
+k=9.08;
+  or
+double k=9.08;
+
+data types: specifies what type of data variables can hold
+
+operetors
+1.Arithmetic operetors
+2.relational operetors-to check single condition
+3.logical operetors-used over realtional operetors
+                   -to check two or more condition
+4.Assignment operetors
+5.conditional operetor
+  (statement1) ? statement2 : statement3
+  if statement1 is T statement2 is executed
+  if statement1 is F statement3 is executed
+6.Increment decrement operetors
+
+ex: a=30 c=80            
+b=a++ - c++ =>30-80=-50
+b= --a + ++c=> 29-81=-52
+z=30
+z++=>30
+++z=>31
+
+a=14 b=36
+c= a - b++=>-22
+7.Bitwise operetors:used over variables
+XOR(^): both no are same then zero
+
+0 0000  
+1 0001
+0010
+0011
+0100
+0101
+0110
+0111
+1000
+1001
+1010
+1011
+
+
+
+
+
+
+----------------------------------------------
+
+
+
+int number = 10;
+String result = (number % 2 == 0) ? "Even" : "Odd";
+System.out.println("Number is " + result);
+
+ 
+
+
+int a = 5; // Binary: 0101
+int b = 3; // Binary: 0011
+int And = a & b; 
+int Or = a | b; 
+int Xor = a ^ b; 
+int Complement = ~a; 
+System.out.println("Bitwise AND: " + And);
+System.out.println("Bitwise OR: " + Or);
+System.out.println("Bitwise XOR: " + Xor);
+System.out.println("Bitwise Complement: " + Complement);
+
+ 
+
+
+String firstName = "John";
+String lastName = "Doe";
+String fullName = firstName + " " + lastName;
+S.o.p(FullName:
+
+1.even
+2. 
+   0101 & 0011 = 0001=>1
+   0101 | 0011 = 0111=>7
+   0101 ^ 0011 = 0110=>6
+   ~a=>1010=>10
+3.Jhon Doe
+   
+
+---------------------------------------------
+
+
+int x = 10;
+
+x += 5; // Equivalent to: x = x + 5
+
+System.out.println("x: " + x);
+
+ 
+
+x -= 3; // Equivalent to: x = x - 3
+
+System.out.println("x: " + x);
+
+ 
+
+x *= 2; // Equivalent to: x = x * 2
+
+System.out.println("x: " + x);
+
+ 
+
+x /= 4; // Equivalent to: x = x / 4
+
+System.out.println("x: " + x);
+
+ 
+
+x %= 3; // Equivalent to: x = x % 3
+
+System.out.println("x: " + x);
+
+
+
+15
+12
+24
+6
+0
+---------------------------------
+int marks = 85;
+String result = (marks >= 60) ? "Pass" : "Fail";
+System.out.println("Result: " + result + ", Marks: " + marks);
+
+ 
+
+boolean isTrue = true;
+boolean isFalse = false;
+boolean result1 = isTrue && (1 / 10 > 0); 
+System.out.println("Result: " + result1);
+
+
+Result:PassMarks:85
+Result:false
+
+
+-----------------------------------
+String message = "Hello";
+message += ", world!";
+System.out.println(message);
+
+
+ 
+
+int result = 10 + 2 * 5; 
+System.out.println("Result: " + result);
+
+ 
+
+result = (10 + 2) * 5; 
+System.out.println("Result: " + result);
+
+1.Hello, world!
+2.Result:20
+3.Result:60
+ 
+----------------------------------------
+
+nextInt()-----> readin data from console --->  integer
+
+nextDouble()---->  double --> real const
+
+next().charAt(0)----->  character data type
+
+next()---->  nextLine()----> String data type
+
+inorder to use this methods create object for Scanner class using:
+classname objectname= new classname(parameter); /// for creating object
+
+Scanner w=new Scanner(System.in);
+
+w.nextInt();
+
+
+
+
+
+Write java program to perform arithmetic operations (+, -, /,  %, *)
+
+
+
+
+class Program1{
+
+public static void main(String args[]){
+ 
+int a=10;
+int b=20;
+System.out.println(a+b);
+System.out.println(a-b);
+System.out.println(a*b);
+System.out.println(a/b);
+}
+}
+
+Write the java program to swap any two numbers
+
+import java.util.Scanner;
+class Program2{
+public static void main(String []args){
+Scanner sc=new Scanner(System.in);
+int num1=sc.nextInt();
+int num2=sc.nextInt();
+int num3;
+num3=num1;
+num1=num2;
+num2=num3;
+System.out.println("num1:"+num1);
+System.out.println("num2:"+num2);
+}
+} 
+
+
+Write the program to find simple interest (ptr/100)
+
+
+
+class Program3{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+int p=sc.nextInt();
+int t=sc.nextInt();
+int r=sc.nextInt();
+int res=ptr/100;
+System.out.println(res);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,156 @@
+[12:56] Srilatha Manam
+
+Write a Java program to get the character at the given index within the String
+Write a Java program to compare two strings lexicographically
+Write a Java program to compare a given string to another string, ignoring case considerations.
+Write a Java program to convert all the characters in a string to uppercase
+Write a Java program to get the index of a pattern in the given string
+
+
+----------------------------------------------------------------------
+
+
+1. String Replacer: Create an application that takes a string and a word as input and replaces all occurrences of the word with another word. Use strings to manipulate the input string.
+2. String Encryption: Create an application that takes a string as input and encrypts it using a simple encryption algorithm like Caesar Cipher or Vigenere Cipher.
+
+ 
+
+3.Text Analyzer: Create an application that takes a text as input and performs different analysis like counting the number of characters, words, and lines, or finding the most common words.
+
+ 
+
+4. Data validator: Create a menu based application that can display list of options:
+                --> Email Verifier: Create a method that takes an email address as input and verifies if it is in the correct format using regular expressions.
+                --> Username and password Verifier: Create a method that takes an username and password as input and verifies these are following basic rules                       (having 1 uppercase, lowercase, 1 digit, 1 special character etc....)
+                --> Mobile number Verifier: Create a method that  takes a mobile number as input and verifies it contains only digits or not, length should be 10                      digits, starts with 6 or 7 or 8 or 9.
+
+
+-----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Converting String to integer data type:
+
+                               String s=”1234”  // “1234” will become String constant , it is not an integer
+
+                               Syntax: Integer.parseInt(string);
+
+Integer.parseInt(s);  // give value as 1234
+
+                                              
+
+Converting String to double data type
+
+String s=”34.621”  // “34.621” will become String constant , it is not an double constant
+
+                               Syntax: Integer.parseDouble(string);
+
+Double.parseDouble(s);  // give value as 34.621f
+
+Converting String to long data type
+
+String s=”123489076”  // “1234” will become String constant , it is not an integer
+
+                               Syntax: Integer.parseLong(s);
+
+Long.parseLong(s);  // give value as 123489076
+
+Note:
+
+Integer, Double, Long:  wrapper classes
+
+int, double, long:  keyword i.e primitive data types
+
+converting other data types to String data type : String.valueOf()
+
+ 
+
+converting integer data type to String :
+
+int n=12345;
+
+String s=String.valueOf(n);  // will converts integer value 1234 to string constant “12345”
+
+ 
+
+ 
+
+converting double data type to String:
+
+double d=12345.78;
+
+String s=String.valueOf(d);  // will converts double value 12345.78 to string constant “12345.78”
+
+ 
+
+converting long data type to String:
+
+long d=1234578;
+
+String s=String.valueOf(d);  // will converts long value 1234578 to string constant “1234578”
+
+ 
+
+has context menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+System.out.println("enter the number");
+    Long str=sc.nextLong();
+    if(Charater.isDigit(str)){
+      if(str.length()==10){
+        if(str.startsWith("6"||"7"||"8"||"9")){
+          System.out.println("valid mobile number");
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+

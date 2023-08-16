@@ -1,0 +1,326 @@
+[10:17] Srilatha Manam
+
+Write a java program to check whether a number is Prime number or not.
+WWrite a java program to print all Prime numbers between 1 to n.
+Write a java program to find sum of all prime numbers between 1 to n.
+Write a java program to find all prime factors of a number.
+Write a java program to check whether a number is Armstrong number or not.
+Write a java program to print all Armstrong numbers between 1 to n.
+Write a java program to check whether a number is Perfect number or not.
+Write a java program to print all Perfect numbers between 1 to n.
+Write a java program to check whether a number is Strong number or not.
+Write a java program to print all Strong numbers between 1 to n.
+Write a java program to print Fibonacci series up to n terms 
+
+
+a number=sum of the cubes of each digit
+example:
+370=>0^3 + 7^3 + 3^3
+   =>0+343+27
+   =>370
+
+
+--------Armstrong number-------
+start
+read any number n
+sum=0, k=n
+while(n>0)
+{
+ digit=n%10;
+ n=n/10;
+ sum=sum+(digit*digit+digit);
+}
+if(sum==k)
+ display"given no is armstrong"
+else
+ disply"not armstrong"
+
+
+---------perfect number--------
+start
+read number i.e n
+sum=0;
+for(i=1;i<=n-1;i++)
+{
+ if(n%i==0)
+    sum=sum+i;
+}
+if(sum==n)
+disply"number is prefect no"
+else
+disply"number is not prefect no"
+
+
+
+-----------Strong number---------
+is a special number whose sum of the factorial of digits is equal to the original number. 
+For Example: 145 is strong number. Since, 1! + 4! + 5! = 145. 
+
+
+start
+read number i.e n
+sum=0
+fact=1,temp=n
+while(n!=0){
+digit=n%10
+for(i=1;i<=digit;i++)
+ fact=fact*i;
+sum=sum+fact;
+n=n/10;
+}
+if(sum==temp)
+disply"strong number"
+else
+disply"not strong number"
+}
+
+
+
+-------------- or -------------
+tep 1: start
+step 2: read number n
+step 3: initialize num=n,sum=0,fact=1
+step 4: while(num>0)
+    {
+    digit=num%10
+    num=num/10
+        while(digit>0)
+        {
+        fact=fact*digit;
+            digit--;
+        }
+    sum=sum+fact
+    }
+step 5: if(sum==n)
+        display "the number is a strong number"
+    else
+        display "the number is not a strong number"
+step 6: end
+
+-----------prime number---------------
+start
+read no
+temp=false
+for(i=2;i<no;i++)
+{
+if(no%i==0)
+{
+ temp=true;
+}
+break;
+}
+if(temp==true)
+disply"not prime no"
+else
+disply"prime no"
+
+----------fibonacci series----------
+0 1 1 2 3 5 8 13 21 34.....
+0+1=1
+  1+1=2
+    1+2=3
+      2+3=5
+        3+5=8
+           5+8=13
+             8+13=21...
+
+start
+read range i.e n
+n1=0; n2=1;
+display n1, n2
+
+do
+{
+ res=n1+n2;
+ display res
+ n1=n2;
+ n2=res;
+}while(res<=n);
+
+stop
+
+------------prime factors-----------
+start
+read range n
+temp=true
+for(i=2;i<n;i++)
+ if(n%i==0)
+   {
+    if(i==2)
+     disply i
+    else
+    for(j=2;j<i-1;j++)
+    {
+     temp=false;
+    }     
+if(temp==false)
+disply i
+
+
+-------to print prime no-------------
+start
+read range n
+for(i=2;i<=n;i++)
+{
+count=0
+for(j=1;j<=i;j++)
+{ 
+  if(i%j==0)
+  {
+    count++;
+  }
+}
+if(count==2)
+ display i
+}
+
+------sum of all prime no b/w range--------
+start
+read range n
+sum=0
+for(i=2;i<=n;i++)
+{
+ count=0
+ for(j=1;j<=i;j++)
+ { 
+  if(i%j==0)
+  {
+    count++;
+  }
+ }
+if(count==2)
+sum=sum+i
+}
+display sum
+
+--------print armstrong no b/w range-----
+start
+read any number n
+for(i=0;i<n;i++)
+{
+sum=0;
+temp=i;
+temp1=true;
+while(temp!=0)
+{
+ digit=temp%10;
+ temp=temp/10;
+ sum=sum+(digit*digit+digit);
+}
+if(sum==i)
+ disply i
+
+--------print all perfect no b/w range---------
+start
+read number i.e n
+for(j=1;j<=n;j++)
+{
+sum=0;
+for(i=1;i<=j;i++)
+{
+ if(j%i==0)
+    sum=sum+i;
+}
+if(sum==j)
+disply j
+
+
+--------to print all strong no b/w range--------
+start
+read number i.e n
+for(j=1;j<=n;j++)
+{
+sum=0
+fact=1,temp=j
+while(j!=0){
+digit=j%10
+for(i=1;i<=digit;i++)
+ fact=fact*i;
+sum=sum+fact;
+j=j/10;
+}
+if(sum==temp)
+disply j
+}
+
+-------print all natural no------------
+start
+read range n
+i=1
+while(i<=n){
+ print i
+ i++
+}
+end
+
+-------print natural no in reverse-------
+start
+read range n
+i=n
+while(i>=n)
+{
+  print i
+  i--
+}
+end
+
+--------print alphabets a to z-------
+start
+char i=65
+while(i<=90)
+{
+ print i
+ i++
+}
+
+----even no b/w 1 to 100-------
+start
+i=1
+while(i<=100)
+{
+  if(i%2==0)
+    display i
+  i++
+}
+
+------odd no b/w 1 to 100------
+start
+i=1
+while(i<=100)
+{ 
+  if(i%2!=0)
+    print i
+  i++
+}
+
+-------sum of natural no------
+start
+read n
+sum=0
+i=1
+while(i<=n)
+{
+ sum=sum+i;
+ i++
+}
+display sum
+
+-----sum of all even no b/w range n-----
+start
+sum=0
+i=1
+while(i<=100)
+{
+  if(i%2==0)
+    sum=sum+i
+  i++
+}
+print sum
+
+----sum of all odd no b/w range n------
+
+start
+
+
+
+

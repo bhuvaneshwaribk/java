@@ -1,0 +1,1460 @@
+-----String------
+
+import java.util.*;
+class CharcterExtraction{
+  public static void main(String args[]){
+    Scanner g=new Scanner(System.in);
+    System.out.println("Give data for string");
+    String s=new String();// allocating memory
+    s=g.nextLine();
+    //System.out.println(s.charAt(2));
+    //System.out.println("hello".charAt(2));
+    
+    char x[]=s.toCharArray();
+
+    System.out.println(Arrays.toString(x));
+    for(int i=0;i<x.length;i++)
+      System.out.println(x[i]);
+    
+  }
+}
+
+
+
+
+import java.util.*;
+
+class Comparsion {
+  public static void main(String args[]) {
+    Scanner g = new Scanner(System.in);
+    System.out.println("Give data for 1st  string");
+    String s1 = new String();
+    s1 = g.nextLine();
+    System.out.println("Give data for 2nd  string");
+    String s2 = new String();
+    s2 = g.nextLine();
+    // 4. String Comparision (two string values)
+
+    // 4.1 compareTo
+    // syntax: string1.comapreTo(string2)
+    // comapte to methods retuns value as 0// -ve // +ve
+    String s3 = "abc";
+    String s4 = "xyz";
+    System.out.println(s1.compareTo(s2));
+    System.out.println(s2.compareTo(s1));
+
+    // 4.2 ==operater
+
+    System.out.println(s1 == s2);
+    /*
+     * out put is always false because address of s1 will not be equal to s2-->as s1
+     * and s2
+     * is stored in heap area in heap multiple instances are created
+     */
+
+    System.out.println(s3 == s4);
+    // get output as false because address of s3 not equal to address of s4
+
+    // 4.3 equals()
+
+    System.out.println(s1.equals(s2));
+
+    // 4.4 equalsIgnoreCase()
+
+    System.out.println(s1.equalsIgnoreCase(s2));
+
+    // 4.5 startswith()
+
+    System.out.println(s1.startsWith("a"));
+
+    // 4.6 endswith()
+
+    System.out.println(s2.endsWith("b"));
+  }
+}
+
+
+
+
+import java.util.*;
+class Concat{
+  public static void main(String args[]){
+    Scanner g=new Scanner(System.in);
+    System.out.println("Give data for string");
+    String s=new String();// allocating memory
+    s=g.nextLine();
+    System.out.println(s.concat("hello"));
+    System.out.println("hello".concat(s));
+    // concatenation using + operater
+    System.out.println(s+"hello");
+    System.out.println("hello"+s);
+  }
+}
+
+
+
+
+
+import java.util.*;
+class CountCharcter{
+  public static void main(String args[]){
+    
+    Scanner g=new Scanner(System.in);
+    System.out.println("Give data for string");
+    String s=new String();
+    s=g.nextLine();
+    //print toatal charcter in string including space
+    System.out.println(s.length());
+    //print number of charcter in each word
+    String b1[]=s.split(" ");
+    for(int j=0;j<b1.length;j++){
+      //System.out.println(b1[j]);
+      System.out.println(b1[j].length());
+  }
+}
+}
+
+
+
+
+import java.util.*;
+class CountWords{
+  public static void main(String args[]){
+    Scanner g=new Scanner(System.in);
+    System.out.println("Give data for string");
+    String s=new String();// allocating memory
+    s=g.nextLine();
+    
+    String b[]=s.split(" ");
+      System.out.println(b.length);
+  }
+}
+
+
+
+
+import java.util.*;
+class FirstChar{
+   public static void main(String args[]){
+    Scanner g=new Scanner(System.in);
+    System.out.println("Give data for string");
+    String s=new String();
+    s=g.nextLine();
+    String b1[]=s.split(" ");
+    for(int j=0;j<b1.length;j++){
+      //System.out.println(b1[j]);
+      System.out.println(b1[j].charAt(0));
+    } 
+   }
+}
+
+
+
+
+
+import java.util.*;
+class FirstLast{
+   public static void main(String args[]){
+    Scanner g=new Scanner(System.in);
+    System.out.println("Give data for string");
+    String s=new String();
+    s=g.nextLine();
+    String b1[]=s.split(" ");
+    for(int j=0;j<b1.length;j++){
+      System.out.println("First Word:"+b1[j].charAt(0));
+      System.out.println("Last Word:"+b1[j].charAt(b1[j].length()-1));
+    
+    } 
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+class LengthFun{
+  public static void main(String args[]){
+    Scanner g=new Scanner(System.in);
+    System.out.println("Give data for string");
+    String s=new String();// allocating memory
+    s=g.nextLine();
+    System.out.println(s.length());
+  }
+}
+
+
+
+
+
+
+import java.util.*;
+class LengthOfWord{
+   public static void main(String args[]){
+    
+    Scanner g=new Scanner(System.in);
+    System.out.println("Give data for string");
+    String s=new String();
+    s=g.nextLine();
+    String b1[]=s.split(" ");
+    for(int j=0;j<b1.length;j++){
+      //System.out.println(b1[j]);
+      System.out.println(b1[j].length());
+  }
+}
+
+}
+
+
+
+
+
+
+import java.util.*;
+class LongestWord{
+  public static void main(String args[]){
+    int j,max=0,min=9;
+    String str="",str1="";
+    Scanner g=new Scanner(System.in);
+    System.out.println("Give data for string");
+    String s=new String();
+    s=g.nextLine();
+    String b1[]=s.split(" ");
+    for(j=0;j<b1.length;j++){
+      //b1[j].length();
+      //System.out.println(size); 
+      if(b1[j].length()>max){
+         max=b1[j].length();
+         str=b1[j];
+      } 
+      if(b1[j].length()<min){
+        min=b1[j].length();
+        str1=b1[j];
+      }
+    }
+    System.out.println("longest word:"+str);
+    System.out.println("smallest word:"+str1);
+      
+
+  }
+}
+
+
+
+
+
+
+
+import java.util.*;
+class RepeatedStringEle{
+  public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter String");
+    String s=sc.nextLine();
+    int j=0;
+    char a[]=new char[10];
+    StringBuffer sb=new StringBuffer(s); 
+    for(int i=0;i<s.length();i++){
+      a[j]=sb.charAt(i);
+      j++;
+    }
+    
+      
+    }
+  }
+
+
+
+
+import java.util.*;
+
+class Search {
+  public static void main(String args[]) {
+    Scanner s = new Scanner(System.in);
+    String str = s.nextLine();
+    // System.out.println(str.indexOf("the"));
+    System.out.println(str.lastIndexOf("e"));
+    /*
+     * System.out.println(str.substring(1,8));
+     * System.out.println(str.substring(1));
+     * System.out.println(str.substring(1,2));
+     * System.out.println(str.substring(-1));
+     */
+
+    // System.out.println(str.replace("the", "xy"));
+    // System.out.println(str.replace("t", "abceds"));
+    // System.out.println(str.trim());
+    // System.out.println(str);
+    // System.out.println(str.toUpperCase());
+
+  }
+}
+
+
+
+
+
+import java.util.*;
+class Split{
+  public static void main(String args[]){
+    Scanner g=new Scanner(System.in);
+    System.out.println("Give data for string");
+    String s=new String();// allocating memory
+    s=g.nextLine();
+    
+    String b[]=s.split(" ");
+    //for(int j=0;j<b.length;j++)
+      System.out.println(b.length);
+
+   /* String b1[]=s.split("%");
+    for(int j=0;j<b1.length;j++)
+      System.out.println(b1[j]);*/
+
+    //length() method is used 
+    //length opertor is used in array
+    
+  }
+}
+
+
+
+
+
+import java.util.*;
+class StringBufferMethods{
+  public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter string value");
+    String s=sc.nextLine();
+    StringBuffer sb=new StringBuffer(s);
+    System.out.println(sb.append("456"));
+    System.out.println(sb.insert(3,9));
+    System.out.println(sb.delete(1,3));
+    System.out.println(sb.replace(2,4,"hai"));
+    System.out.println(sb.reverse());
+    System.out.println(sb);
+  }
+}
+
+
+
+-----array----
+
+// Write a java program to delete an element from an array at a specified position.
+
+import java.util.*;
+class ArrayDeletion{
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter the size of array");
+    int n=s.nextInt();
+    int arr[]=new int[n];
+    for(int i=0;i<=n-1;i++)
+      arr[i]=s.nextInt();
+    for(int i=0;i<=n-1;i++)
+     System.out.print(arr[i]);
+    System.out.println();
+    System.out.println("enter the postion to delete");
+    int pos=s.nextInt();
+    for(int k=pos;k<n-1;k++)
+      arr[k]=arr[k+1];
+    for(int i=0;i<=n-2;i++)
+     System.out.print(arr[i]);
+  }
+}
+
+
+import java.util.*;
+class ArrayFrequency{
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter size of array");
+    int n=s.nextInt();
+    int arr[]=new int[n];
+    for(int i=0;i<=n-1;i++)
+      arr[i]=s.nextInt();
+
+    int visited[] = new int[n];
+
+    for (int o = 0; o < n; o++)
+
+      visited[o] = -1;
+
+ 
+
+    // 3.2 to count frequncy compare cell i with all other cells from i+1 to last
+
+    // cell
+
+    for (int m = 0; m < n ; m++) {
+
+      int count = 1;
+
+      for (int i = m + 1; i < n; i++) {
+
+ 
+
+        if (arr[m] == arr[i] && visited[i] == -1) {
+
+          count = count + 1;
+
+          visited[i] = 0;
+
+        }
+
+ 
+
+      }
+
+      if (visited[m] != 0)
+
+        System.out.println(arr[m] + " frequencny is " + count);
+
+    }
+  }
+}
+
+
+
+//Write a Java program to insert an element (specific position) into an array.
+
+import java.util.*;
+class ArrayInsertion{
+public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+System.out.println("enter size of array");
+  int n=s.nextInt();
+  int arr[]=new int[n];
+  for(int i=0;i<=n-2;i++)
+    arr[i]=s.nextInt();
+  for(int i=0;i<=n-2;i++)
+    System.out.print(arr[i]);
+  System.out.println();
+  System.out.println("enter postion to insert");
+  int pos=s.nextInt();
+  System.out.println("enter the data to insert");
+  int data=s.nextInt();
+  for(int k=n-2;k>=pos;k--)
+    arr[k+1]=arr[k];
+  arr[pos]=data;
+  for(int i=0;i<=n-1;i++)
+    System.out.print(arr[i]);
+  
+  
+     }
+}
+
+
+
+
+
+import java.sql.Array;
+import java.util.*;
+
+ 
+
+class ArrayReverseFunction {
+  public static void main(String[] args) {
+    ArrayReverseFunction t = new ArrayReverseFunction();
+    t.read();// controller transfer to line 14 i.e read()
+  }
+
+ 
+
+  void read() {
+    ArrayReverseFunction t1 = new ArrayReverseFunction();
+    int n;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter size of array");
+    n = sc.nextInt();
+    int array[] = new int[n];
+    System.out.println("Enter values of array");
+    for (int p = 0; p < n; p++)
+      array[p] = sc.nextInt();
+
+ 
+
+    t1.display(array); // controller transfer to line 48 i.e display()
+
+ 
+
+    t1.reverse(array); // just we sending array i.e starting address
+
+ 
+
+    // this line transfer controller to line no 34
+    t1.display(array);// controller transfer to line 48 i.e display()
+
+ 
+
+  }
+
+ 
+
+  void reverse(int arr[]) {
+    // to know no of elements in an array
+    // operator---> length used for arrays
+    // arrayname.length
+    // length()--> used of string
+    for (int i = 0; i < arr.length / 2; i++) {
+      int h = arr[i];
+      arr[i] = arr[arr.length - 1 - i]; // n-1-i
+      arr[arr.length - 1 - i] = h;
+    }
+    
+    // for(i=0;i<arr.length;i++)
+    // System.out.print(" " + arra[i]);
+  }
+
+ 
+
+  void display(int h[]) {
+    for (int i = 0; i < h.length; i++)
+      System.out.print(" " + h[i]);
+  }
+}
+
+
+
+
+//Write a java program to find the sum of all array elements
+
+import java.util.*;
+class ArraySum{
+  public static void main(String args[]){
+    int sum=0;
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter array size");
+    int n=s.nextInt();
+    int arr[]=new int[n];
+    for(int i=0;i<=n-1;i++)
+      arr[i]=s.nextInt();
+    for(int i=0;i<=n-1;i++)
+      sum+=arr[i];
+    System.out.println("sum = "+sum);
+      
+  }
+}
+
+
+
+
+
+import java.util.*;
+class Combination{
+  public static void main(String args[]){
+    Scanner s= new Scanner(System.in);
+    System.out.println("enter size");
+    int n=s.nextInt();
+    int array[]=new int[n];
+    System.out.println(" enter array values");
+    
+      for(int i=0;i<n;i++)
+        array[i]=s.nextInt();
+    
+    
+    for(int j=0;j<n;j++)
+      System.out.println(array[j]);
+    
+    
+}
+}
+
+
+
+
+//Write a Java program to find the common elements between two arrays
+
+import java.util.*;
+class CommanElement{
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter size of array");
+    int n=s.nextInt();
+    int arr1[]=new int[n];
+    int arr2[]=new int[n];
+    System.out.println("enter arr1 elements");
+    for(int i=0;i<=n-1;i++)
+      arr1[i]=s.nextInt();
+    System.out.println("enter arr2 elements");
+    for(int i=0;i<=n-1;i++)
+      arr2[i]=s.nextInt();
+    System.out.println("comman elements are:");
+    for(int j=0;j<=n-1;j++){
+      for(int k=0;k<=n-1;k++){
+      if(arr1[j]==arr2[k])
+        System.out.println(arr1[j]);
+  }
+  }
+}
+}
+
+
+
+//Write a java program to copy all elements from one array to another array.
+
+import java.util.*;
+class CopyElement{
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter size of array");
+    int n=s.nextInt();
+    int arr1[]=new int[n];
+    int arr2[]=new int[n];
+    for(int i=0;i<=n-1;i++)
+      arr1[i]=s.nextInt();
+    System.out.print("arr1:");
+    for(int i=0;i<=n-1;i++)
+       System.out.print(arr1[i]+" ");
+    System.out.println();
+    System.out.print("arr2:");
+    for(int i=0;i<=n-1;i++){
+      arr2[i]=arr1[i];
+      System.out.print(arr2[i]+" ");
+  }
+  }
+}
+
+
+
+//Write a Java program to find the common elements between two arrays
+
+import java.util.*;
+class DuplicateElement{
+  public static void main(String args[]){
+    int count=0;
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter size of array");
+    int n=s.nextInt();
+    int arr1[]=new int[n];
+    System.out.println("enter arr1 elements");
+    for(int i=0;i<=n-1;i++)
+      arr1[i]=s.nextInt();
+    System.out.println("comman elements are:");
+    for(int j=0;j<=n-1;j++){
+      for(int k=j+1;k<=n-1;k++){
+       if(arr1[j]==arr1[k])
+         count++;
+         
+  }
+  }
+    System.out.println(count);
+}
+}
+
+
+
+
+
+import java.util.*;
+class DuplicateElementRemove {
+  public static void main(String[] args) {
+    int n;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter size of array");
+    n = sc.nextInt();
+    int array[] = new int[n];
+    System.out.println("Enter values of array");
+    for (int p = 0; p < n; p++)
+      array[p] = sc.nextInt();
+    System.out.println("the  values of array befor deleting duplicates is: ");
+    for (int i = 0; i < n; i++)
+      System.out.print(" " + array[i]);
+
+ 
+
+    for (int i = 0; i <=n - 1; i++) {
+
+      for (int s = i+1; s <= n - 1; s++) {
+        if (array[i] == array[s]) {
+          for (int r = s; r < n - 1; r++)
+            array[r] = array[r + 1];
+          n = n - 1;
+          s--;
+        }
+      }
+
+    }
+
+
+ 
+
+    System.out.println("after deleting duplicates  array elements are :");
+    for (int i = 0; i < n; i++)
+      System.out.print(" " + array[i]);
+  }
+
+ 
+
+}
+
+
+
+
+
+
+
+//Write a Java program to find the index of an array element.
+
+import java.util.*;
+class FindIndex{
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter size of array");
+    int n=s.nextInt();
+    int arr[]=new int[n];
+    for(int i=0;i<=n-1;i++)
+      arr[i]=s.nextInt();
+    System.out.println("enter the element");
+    int ele=s.nextInt();
+    for(int i=0;i<=n-1;i++)
+      if(arr[i]==ele)
+            System.out.print("index value of "+ele+":"+i);
+     
+  }
+}
+
+
+
+
+
+
+
+//Write a Java program to find the maximum and minimum elements in an array.
+
+import java.util.*;
+class MaxMinElement{
+  public static void main(String args[]){
+    int max=0,min=9;
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter array size");
+    int i;
+    int n=s.nextInt();
+    int arr[]=new int[n];
+    for(int j=0;j<=n-1;j++)
+      arr[j]=s.nextInt();
+    for(i=0;i<=n-1;i++){
+       if(arr[i]<min)
+         min=arr[i];
+       if(arr[i]>max)
+         max=arr[i];
+    }
+    System.out.println("max = "+max);
+    System.out.println("min = "+min);
+      
+  }
+}
+
+
+
+
+
+
+//Write a java program to count the total number of negative elements in an array.
+
+import java.util.*;
+class NegativeElement{
+  public static void main(String args[]){
+    int count=0;
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter size of array");
+    int n=s.nextInt();
+    int arr[]=new int[n];
+    for(int i=0;i<=n-1;i++)
+      arr[i]=s.nextInt();
+    for(int i=0;i<=n-1;i++)
+      if(arr[i]<0)
+        count++;
+      
+    System.out.println("count of negative number="+count);
+  }
+}
+
+
+
+
+
+
+//write the java program to rearrange array elements like place all odd numbers first and then even numbers
+import java.util.*;
+class RearrangeElements{
+  public static void main(String args[]){
+    Scanner s= new Scanner(System.in);
+    System.out.println("enter size");
+    int n=s.nextInt();
+    int array[]=new int[n];
+    System.out.println(" enter array values");
+    for(int i=0;i<n;i++)
+     array[i]=s.nextInt();
+    RearrangeElements r=new RearrangeElements();
+    r.Rearrange(array);
+    
+  }
+  void Rearrange(int arr[]){
+    int i=0;
+    while(arr[i] % 2 != 0 && i<arr.length)
+      i++;
+    
+   /* for( i=0;i<arr.length;i++){
+      if(arr[i] % 2 != 0)
+        continue;
+    }*/
+    for(int k=0;k<arr.length;k++)
+       if(arr[k]%2==0){
+          int temp;
+          temp=arr[i];
+          arr[i]=arr[k];
+          arr[k]=temp;
+          i++;
+       }
+        
+    
+    for(int j=0;j<arr.length;j++)
+      System.out.println(arr[j]);
+  }
+}
+
+
+
+
+/*Write a Java program to remove duplicate elements from an array.*/
+import java.util.*;
+ 
+class RemoveDuplicate {
+  public static void main(String[] args) {
+    int n;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter size of array");
+    n = sc.nextInt();
+    int array[] = new int[n];
+    System.out.println("Enter values of array");
+    for (int p = 0; p < n; p++)
+      array[p] = sc.nextInt();
+    System.out.println("the  values of array before calling duplicate function");
+    for (int i = 0; i < n; i++)
+      System.out.print(" " + array[i]);
+     RemoveDuplicate r= new RemoveDuplicate();
+    r.duplicate(array,n);
+    System.out.println("the  values of array after calling duplicate function");
+    for (int i = 0; i < n; i++)
+      System.out.print(" " + array[i]);
+  }
+ void duplicate(int array[],int n){
+     for (int i = 0; i <=n - 1; i++) {
+
+      for (int s = i+1; s <= n - 1; s++) {
+        if (array[i] == array[s]) {
+          for (int r = s; r < n - 1; r++)
+            array[r] = array[r + 1];
+          n = n - 1;
+          s--;
+        }
+      }
+
+    }
+
+
+ 
+
+    System.out.println("after deleting duplicates  array elements are :");
+    for (int i = 0; i < n; i++)
+      System.out.print(" " + array[i]);
+  }
+
+ 
+}
+
+
+
+
+
+
+//Write a Java program to find the common elements between two arrays
+
+import java.util.*;
+class SecondLargest{
+  
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter size of array");
+    int n=s.nextInt();
+    int arr[]=new int[n];
+    System.out.println("enter arr elements");
+    for(int i=0;i<=n-1;i++)
+      arr[i]=s.nextInt();
+    System.out.println("array before sorting");
+    for(int i=0;i<=n-1;i++)
+      System.out.println(arr[i]);
+    for(int j=0;j<=n-1;j++){
+      for(int k=j+1;k<=n-1;k++){
+      if(arr[j]>arr[k]){
+        int temp=arr[j];
+        arr[j]=arr[k];
+        arr[k]=temp;
+      }
+  }
+      
+  }
+    //System.out.println("array value after sorting");
+    //for(int i=0;i<=n-1;i++)
+      System.out.println("second largest element="+arr[n-2]);
+}
+}
+
+
+
+
+//Write a Java program to find the common elements between two arrays
+
+import java.util.*;
+class SortArray{
+  
+  public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter size of array");
+    int n=s.nextInt();
+    int arr[]=new int[n];
+    System.out.println("enter arr elements");
+    for(int i=0;i<=n-1;i++)
+      arr[i]=s.nextInt();
+    System.out.println("array before sorting");
+    for(int i=0;i<=n-1;i++)
+      System.out.println(arr[i]);
+    for(int j=0;j<=n-1;j++){
+      for(int k=j+1;k<=n-1;k++){
+      if(arr[j]>arr[k]){
+        int temp=arr[j];
+        arr[j]=arr[k];
+        arr[k]=temp;
+      }
+  }
+      
+  }
+    System.out.println("array value after sorting");
+    for(int i=0;i<=n-1;i++)
+      System.out.println(arr[i]);
+}
+}
+
+
+
+
+
+
+
+import java.util.*;
+ 
+class Unique{
+   
+    public static void main (String[] args)
+    {
+      Scanner s=new Scanner(System.in);
+      System.out.println("enter array size");
+         int n=s.nextInt();
+         int arr[] = new int[n];
+          for(int i=0;i<=n-1;i++)
+            arr[i]=s.nextInt();
+      System.out.println("array values:");
+          for(int i=0;i<=n-1;i++)
+            System.out.println(arr[i]);
+       
+        for (int i = 0; i < n; i++)
+        {
+          
+            int j;
+            for (j = 0; j < i; j++)
+            if (arr[i] == arr[j])
+                break;
+     
+            
+            if (i == j)
+            System.out.print( arr[i] + " ");
+        }
+    }
+     
+ 
+    }
+
+
+----loops----
+
+
+import java.util.*;
+class ArmStrong{
+  public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    int num =sc.nextInt();
+    int sum=0,k=num;
+    while(num>0){
+      int digit=num%10;
+      sum=sum+(digit*digit*digit);
+      num=num/10;
+    }
+    if(sum==k)
+      System.out.println(k+"is ArmStrong");
+    else
+      System.out.println(k+"is not ArmStrong");
+  }
+}
+
+
+
+
+
+import java.util.*;
+class Factor{
+  public  static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    for(int i=1;i<=n;i++){
+      if(n%i==0)
+        System.out.println(i);
+    }
+    
+  }
+}
+
+
+
+import java.util.*;
+class Fibonacci{
+  public static void main(String args[]){
+    Scanner sc= new Scanner(System.in);
+    System.out.println("enter the range");
+    int num=sc.nextInt();
+    int num1=0,num2=1;
+    System.out.println(num1);
+    System.out.println(num2);
+    int result;
+    do{
+       result=num1+num2;
+      System.out.println(result);
+      num1=num2;
+      num2=result;
+      }while(result<=num);
+  }
+}
+
+
+
+
+import java.util.*;
+
+ 
+
+class Frequency {
+
+  public static void main(String p[]) {
+
+    // 1. give any no as input
+
+    int number;// varaible declartion
+
+    Scanner t = new Scanner(System.in);
+
+    System.out.println("enter any number");
+
+    number = t.nextInt();
+
+ 
+
+    // 2. Store digits in an array
+
+    // 2.1 take an array and allocate memory for it
+
+    // 567---> 3cells 789985---> 6 cells
+
+    // 2.2 fisrt know how many digits are there in the number
+
+    int temp = number;
+
+    int noofdigits = 0;
+
+    while (temp > 0) {
+
+      noofdigits = noofdigits + 1;
+
+      temp = temp / 10;
+
+    }
+
+    // 2.1 take an array and allocate memory
+
+    int digits[] = new int[noofdigits];
+
+    // this allocate memory
+
+ 
+
+    // 2.3 store individual digits in array dgits[]
+
+    int r=noofdigits-1;
+
+    while (number > 0) {
+
+
+        digits[r] = number % 10;
+
+      // placing digits from last cell to first cell
+
+      number = number / 10;
+
+      r=r-1;
+
+    }
+
+    for (int i = 0; i < noofdigits; i++)
+
+      System.out.println(digits[i]);
+
+    // 3. count frequncy of each digit
+
+ 
+
+    // 3.1 take another parllel array to avoid duplication
+
+ 
+
+    int visited[] = new int[noofdigits];
+
+    for (int o = 0; o < noofdigits; o++)
+
+      visited[o] = -1;
+
+ 
+
+    // 3.2 to count frequncy compare cell i with all other cells from i+1 to last
+
+    // cell
+
+    for (int m = 0; m < noofdigits ; m++) {
+
+      int count = 1;
+
+      for (int n = m + 1; n < noofdigits; n++) {
+
+ 
+
+        if (digits[m] == digits[n] && visited[n] == -1) {
+
+          count = count + 1;
+
+          visited[n] = 0;
+
+        }
+
+ 
+
+      }
+
+      if (visited[m] != 0)
+
+        System.out.println(digits[m] + " frequencny is " + count);
+
+    }
+
+  }
+
+}
+
+
+
+
+import java.util.*;
+class Perfect{
+  public static void main(String[] args)
+        {
+            Scanner obj = new Scanner (System.in);
+            System.out.println("enter the value m and n");
+            int m = obj.nextInt();
+            int n = obj.nextInt();
+
+            for(int i=m; i<=n; i++)
+            {
+                if(perfect(i))
+                    System.out.println(i);
+            }
+        }
+  static boolean perfect(int num)
+        {
+            int sum = 0;
+            for(int i=1; i<num; i++)
+            {
+                if(num%i==0)
+                {
+                    sum = sum+i;
+                }
+            }
+            if(sum==num)
+                return true;
+            else
+                return false;
+        }
+
+  }
+
+
+
+
+
+import java.util.*;
+class PrimeNumber{
+  public static void main(String arg[])	
+	{
+	int i,count;
+               System.out.print("Enter m and n value : ");
+	Scanner sc=new Scanner(System.in);
+    int m=sc.nextInt();
+	int n=sc.nextInt();
+               System.out.println("Prime numbers between"+m+ " to "+n+" are ");
+	for(int j=m;j<=n;j++)
+	{
+	count=0;
+	for(i=1;i<=j;i++)
+	{
+	   if(j%i==0)
+	   {
+	        count++;        
+	   }
+	}
+	if(count==2)
+	       System.out.print(j+"  ");     
+	}
+	}
+  }
+
+
+
+
+
+
+import java.util.*;
+class StrongNoInRange{
+  public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter range");
+    int range=sc.nextInt();
+    StrongNoInRange s=new StrongNoInRange();
+    for(int i=1;i<=range;i++){
+      s.checkStrongNo(i);
+    }
+  }
+   static void checkStrongNo(int num){
+    int sum=0;
+    int temp=num;
+    while(num!=0){
+      int digit=num%10;
+      int k=fact(digit);
+      sum=sum+k;
+      num=num/10;
+    }
+    if(sum==temp)
+      System.out.println(temp+"is a Strong number");
+   
+  }
+  static int fact(int a){
+    int fact=1;
+    for(int i=1;i<=a;i++)
+      fact=fact*i;
+    return fact;
+      
+  }
+}
+
+
+
+
+import java.util.*;
+class StrongNumber{
+  public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    checkStrongNo(n);
+  }
+  static void checkStrongNo(int num){
+    int sum=0;
+    int temp=num;
+    while(num!=0){
+      int digit=num%10;
+      int k=fact(digit);
+      sum=sum+k;
+      num=num/10;
+    }
+    if(sum==temp)
+      System.out.println(temp+"is a Strong number");
+    else
+      System.out.println(temp+"is not a Strong number");
+    
+  }
+  static int fact(int a){
+    int fact=1;
+    for(int i=1;i<=a;i++)
+      fact=fact*i;
+    return fact;
+      
+  }
+}
+
+
+
+----number series----
+
+
+
+import java.util.*;
+
+class NumberSeries1 {
+
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter no of rows");
+    int row = sc.nextInt();
+    NumberSeries1 s = new NumberSeries1();
+    s.pattern(row);
+  }
+
+  void pattern(int row) {
+    for (int r = 1; r <= row; r++) {
+      for (int c = 1; c <= r; c++) {
+        System.out.print(c + " ");
+      }
+      System.out.println();
+    }
+
+  }
+}
+
+
+
+
+
+
+import java.util.*;
+class StarSeries1{
+  public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    int row=sc.nextInt();
+    StarSeries1 s=new StarSeries1();
+    s.pattern(row);
+ }
+ void pattern(int row){
+    for(int r=1;r<=row;r++){
+      for(int c=1;c<=r;c++){
+        System.out.print("*"+" ");
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+
+
+
+
+//write java program to print prime digits in a  given a number
+import java.util.*;
+
+ 
+
+class Primedigit {
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter any number:");
+    int n = sc.nextInt();
+    System.out.println("the prime digits in given  number:");
+    while (n > 0) {
+      int d = n % 10;
+      if (d == 2 || d == 3 || d == 5 || d == 7)
+        System.out.print(d + " ");
+      n = n / 10;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

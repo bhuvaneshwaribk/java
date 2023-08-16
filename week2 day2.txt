@@ -1,0 +1,16 @@
+features of java --->
+1.object oriented
+2.simple
+3.platform independent
+4.secured- develop virus free applic
+5.robust-handling run time error
+6.Architecure neutral
+7.portable
+8.distributed
+9.multi-threaded
+10.it supports dynamic loading of files
+11.high performance
+12.interpreted
+
+complier and interpreter
+-java is platform independent but jvm is platform dependent

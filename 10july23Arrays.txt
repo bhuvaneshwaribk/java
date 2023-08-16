@@ -1,0 +1,366 @@
+Arrays:it is collection of similar data type values which is stored in continous memory location.
+> it can store more then one value
+
+> Array declartion:
+
+store emi value for some 10 different loan : double  emi[10];
+
+we store mobile no of 30 employees:  long mobulenumber[30];
+
+store grades of 15 students:  char grade[15];
+
+
+> to allocate memory for an array use new keyword:
+
+> array definaton:
+datatype [] arrayName=new datatype[size];
+datatype arrayName[]=new datatype[size];
+
+double emi[]=new double[10];
+
+long []mobilenumber=new long[30];
+
+char[] grade=new char[15];
+
+> new is an opertor that allocate memory in heap region of main memory
+
+> types of Array
+ 1.static Array---->stack array area 
+int s[]={2,3,4,5};
+
+2.dynamic Array---->heap area
+
+int s=new int[3];
+s[0]=1
+s[1]=2
+s[2]=3
+
+
+
+
+
+[12:05] Srilatha Manam
+
+class HelloWorld {
+
+    public static void main(String[] args) {
+
+        int a[]={23,45,12};
+
+        System.out.println(a[0]);
+
+           System.out.println(a[1]);
+
+              System.out.println(a[2]);
+
+
+              //daynamic array
+
+              int a1[]=new int[6];  
+
+            a1[0]=10;
+
+             a1[1]=20;
+
+              a1[2]=30;
+
+               a1[3]=40;
+
+                a1[4]=50;
+
+                 a1[5]=60;
+
+              System.out.println(a1[0]);
+
+              System.out.println(a1[1]);
+
+              System.out.println(a1[2]);
+
+              System.out.println(a1[3]);
+
+              System.out.println(a1[4]);
+
+              System.out.println(a1[5]);
+
+
+    }
+
+}
+
+[12:06] Srilatha Manam
+
+class HelloWorld {
+
+    public static void main(String[] args) {
+
+        int a[]={23,45,12};  // static array
+
+        System.out.println(a[0]);
+
+           System.out.println(a[1]);
+
+              System.out.println(a[2]);
+
+
+              //daynamic array
+
+              int a1[]=new int[6];  // dynamic array with staic size and static data
+
+            a1[0]=10;
+
+             a1[1]=20;
+
+              a1[2]=30;
+
+               a1[3]=40;
+
+                a1[4]=50;
+
+                 a1[5]=60;
+
+              System.out.println(a1[0]);
+
+              System.out.println(a1[1]);
+
+              System.out.println(a1[2]);
+
+              System.out.println(a1[3]);
+
+              System.out.println(a1[4]);
+
+              System.out.println(a1[5]);
+
+
+    }
+
+}
+
+
+
+
+
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        // Dyamic array with dymanic data
+        int n;  // n variable to store number of elements in array
+        Scanner b=new Scanner(System.in);
+        System.out.println("Enter size of array");
+        n=b.nextInt();
+
+        int array[]=new int[n];
+        System.out.println(array[0]);
+         System.out.println(array[1]);
+          System.out.println(array[2]);
+           System.out.println(array[3]);
+
+
+    }
+}
+
+output--->
+size=4
+0
+0
+0
+0
+
+
+
+
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        // Dyamic array with dymanic data
+        int n;  // n variable to store number of elements in array
+        Scanner b=new Scanner(System.in);
+        System.out.println("Enter size of array");
+        n=b.nextInt();
+        int array[]=new int[n];
+        System.out.println(array[0]);
+         System.out.println(array[1]);
+          System.out.println(array[2]);
+           System.out.println(array[3]);
+          
+
+    }
+}
+
+output:
+size=3
+0
+0
+0
+ Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3at HelloWorld.main(HelloWorld.java:15)
+
+
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        // Dyamic array with dymanic data
+        int n;  // n variable to store number of elements in array
+        Scanner b=new Scanner(System.in);
+        System.out.println("Enter size of array");
+        n=b.nextInt();
+        int array[]=new int[n];
+        for(int p=0;p<n;p++)
+        System.out.println(array[p]);
+        }
+}
+
+
+
+
+
+
+import java.uitl.*;
+
+class HelloWorld {
+
+    public static void main(String[] args) {
+
+    Scanner s=new Scanner(System.in);
+
+    int n=s.nextInt();
+
+    int arr[]=new int[n];
+
+    for(int y=0;y<n;y++)
+
+    arr[y]=s.nextInt();  //   giving values to arr[0] to a[[n-1]
+
+    for(int y=0;y<n;y++) // for travelling over index numbers from 0 to n-1
+
+    {
+
+        if(arr[y]%2==0) // 
+
+        System.out.println(arr[y]);
+
+    }
+
+}
+
+}
+
+ 
+
+if arr[]===> 2 2 2 2 12 3 4 45===> output as: 2 2 2 2 12 4
+
+
+import java.uitl.*;
+
+class HelloWorld {
+
+    public static void main(String[] args) {
+
+    Scanner s=new Scanner(System.in);
+
+    int n=s.nextInt();
+
+    int arr[]=new int[n];
+
+    for(int y=0;y<n;y++)
+
+    arr[y]=s.nextInt();  
+
+    for(int y=0;y<n;y=y+2) -->0,2,4,6
+
+    {
+
+        if(arr[y]%2==0) 
+
+        System.out.println(arr[y]);
+
+    }
+
+}
+
+}
+
+
+output--->2,2,12,4
+
+import java.uitl.*;
+class HelloWorld {
+    public static void main(String[] args) {
+    Scanner s=new Scanner(System.in);
+    int n=s.nextInt();
+    int arr[]=new int[n];
+    for(int y=0;y<n;y=y+2)
+    arr[y]=s.nextInt();  
+
+}
+}
+in which index numbers data will be readed/ stored----> arr[0], arr[2], arr[4],......
+What are the values for arr[1], arr[3], .....---> 0,0,0,0,0,0,  .........
+
+
+
+
+import java.uitl.*;
+class HelloWorld {
+    public static void main(String[] args) {
+    char ch[]=new char[26];
+    int j=0;
+    for(char c='z';c>='a';c=c-2)
+    {
+        ch[j]=c;
+        j++;
+    }
+    System.out.println(ch[0]);
+    System.out.println(ch[1]);
+    System.out.println(ch[4]);
+
+    }
+}
+  12    11     10   9     8     7     6     5     4     3     2     1     0
+a b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s  t  u  v  w  x  y  z
+
+
+
+
+
+
+
+
+
+[16:08] Srilatha Manam
+
+temp=n;
+
+            while(n>0)
+
+            {
+
+                c=c+1;
+
+                n=n/10;
+
+            }
+
+
+            if(c==10)
+
+            {
+
+                while(j>=4)
+
+                {
+
+                    res=temp%10+res;
+
+                }
+
+            }
+
+            for(int p=1;p<=6;p++)
+
+            res="*"+res;
+
+            System.out.pritnln(res);
+
+        }

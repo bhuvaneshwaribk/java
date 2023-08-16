@@ -1,0 +1,324 @@
+Review
+
+Why java IS Platform independent language.
+Did JVM is platform dependent or inde[pendent. Why?
+How a constant if different from variable?
+What are the drawback of an array?
+Write the program to find middle digit/ digitsd of a number?
+Difference between compiler and interpreter
+How is a static array different from a dynamic array
+What is the difference between variable declaration and variable definition?
+What are the parameter-passing techniques?
+How to pass an array from the calling function to the called function?
+What are logical operators?
+Write the code to get the most repeated digits in a given number.
+What are the uses for JDK, JRE, JVM, and JIT
+What is the meaning of each keyword in the main() method?
+How characters constant different from a string constant.
+Can we use two main() in any program?
+What is the use of data type?
+Write the code to display the least repeated number in the given array. 
+What are the advantages of arrays
+What is the difference between a while loop and a do-while loop
+How to create an object?
+What is the difference between primitive and non-primitive data types?
+Write the code to search for an element in the given array
+What is the symbol we have to use for start and stop
+What are the characteristics of an array?
+What are the characteristics of an algorithm?
+How to give data for character variables.
+List operators are in the java.
+How the conditional operator will work
+How to give float constant value.
+What is the difference between a break and a continued statement?
+Write the program to display all even digits in a given number.
+What is the difference between a variable and an array?
+How to find the total no of elements in an array?
+What are the advantages of Java?
+Why java is a robust language?
+When the data will be stored in stack and heap area.
+What is implicit type conversion?
+how to stop block execution?
+Why deletion operation Is not efficient in an array?
+Write the program to arrange the first half in ascending order and the second half in descending order.
+When we have to choose a do-while loop in any application.
+Can it be mandatory to use break statement at every case?
+When do we have to use the if-else ladder?
+in if-else ladder when last else block will execute?
+Why java is a portable language?
+Why do we need an object for a class?
+Write the program to get all even digits from a given number
+What are the different types of decision-making statements
+If you want to execute the set of statements based on more conditions how we will write them?
+What is the use of a Java compiler?
+What is the difference between prefixes and postfix increments?
+What are the advantages of loops?
+What is the functionality of the logical OR Operator?
+List the methods which are in the scanner class.
+Write the logic to print all strong numbers between 2000 to 5000. 
+Why wee to use variables in the program?
+Difference between a Java compiler and an interpreter?
+What is the difference between an integer constant and a real constant?
+What is the keyword?
+What is the use of a switch statement?
+How the switch statement will be executed?
+How much memory is required for an integer array?
+Explain the syntax of main().
+Write the program to check given number is a perfect number or not.
+
+
+----------------------------------------------------
+Number Guesser: Create a number guessing game where the computer generates a random number and the user has to guess it. if user Guess is incorrect, then give hints (weather the actual number is less than/ greater than guess number).
+
+ 
+
+7. Menu based application on Array Operations: create an application which will display list of operations on array.
+             --> Insert an element in first index 
+             --> Insert an element in last index
+             --> Insert an element in specified index
+             --> Remove element from first index
+             --> Remove element from last index
+             --> Remove element from specified index
+             --> Remove user eneted element
+             --> Display all in ASC/DESC order
+
+
+----------------------------------------------------
+
+
+
+
+1)print middle number of an array and middle number in a digit
+
+----------------------------------------
+public static void main(String args[]){
+    Scanner s=new Scanner(System.in);
+    System.out.println("enter a digit");
+    int n=s.nextInt();
+    int temp=n;
+    int count=0;
+    while(n>0){
+      n/=10;
+      count++;
+    }
+    System.out.println("no digit in a given number is="+count);
+    int arr[]=new int[count];
+    for(i=count-1;i>=0;i--){
+      int r=temp%2;
+      arr[i]=r;
+      temp/=temp
+    }
+-----------------------------------------
+//find the middle element and find middle digit of given number
+import java.util.Scanner;
+ 
+class Sample {
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter a number:");
+    int n = sc.nextInt();
+    int d, n1 = n;
+    int count = 0;
+    while (n > 0) {
+      count++;
+      n = n / 10;
+    }
+    int arr[] = new int[count];
+    for (int i = 0; i < count; i++) {
+      d = n1 % 10;
+      arr[i] = d;
+      n1 = n1 / 10;
+    }
+    int middle = count / 2;
+    if (count / 2 != 0) {
+      System.out.println(" " + arr[middle - 1]);
+    }
+    if (count / 2 == 0)
+      System.out.println(" " + arr[middle] + " " + arr[middle - 1]);
+  }
+ 
+}
+------------------------------------------------------
+2)print most repeated number in array
+
+
+
+import java.util.*;
+
+class Sample {
+  public static void main(String args[]) {
+    Scanner s = new Scanner(System.in);
+    int n = s.nextInt();
+    int count = 0, m,mostrepele=0;
+    int  max = 0;
+    int arr[] = new int[n];
+    for (int i = 0; i < n; i++) {
+      arr[i] = s.nextInt();
+    }
+
+    
+    for (m = 0; m < n; m++) {
+      count = 1;
+      for (int p = m + 1; p < n; p++) {
+        if (arr[p] == arr[m] ) {
+          count++;
+        
+
+        }
+
+      }
+      
+
+      if (count > max){
+        max = count;
+        leastrepele=arr[m];
+        System.out.println(moststrepele+"is least repeated element");
+
+      }
+    }
+
+
+  }
+}
+
+
+
+3)print least repeated number in array
+
+
+import java.util.*;
+
+class Sample {
+  public static void main(String args[]) {
+    Scanner s = new Scanner(System.in);
+    int n = s.nextInt();
+    int count = 0, m,leastrepele=0;
+    int  min = 9;
+    int arr[] = new int[n];
+    for (int i = 0; i < n; i++) {
+      arr[i] = s.nextInt();
+    }
+
+    
+    for (m = 0; m < n; m++) {
+      count = 1;
+      for (int p = m + 1; p < n; p++) {
+        if (arr[p] == arr[m] ) {
+          count++;
+        
+
+        }
+
+      }
+      
+
+      if (count < min){
+        min = count;
+        leastrepele=arr[m];
+        System.out.println(leastrepele+"is least repeated element");
+
+      }
+    }
+
+
+  }
+}
+
+
+4)search an element in an array
+
+import java.util.*;
+class example{
+
+public static void main(String arg[]){
+Scanner s=new Scanner(System.in);
+System.out.println("enter the size of array");
+int n=s.nextInt();
+System.out.println(" enter element to search");
+int ele=s.nextInt();
+int arr[]=new int[n];
+for(int i=0;i<n;i++)
+   arr[i]=s.nextInt();
+for(int j=0;j<n;j++){
+   if(arr[j]==ele)
+     System.out.println(ele+"is present at index"+j);
+
+}
+}
+}
+
+5)to print numbers in reverse
+
+import java.util.*;
+class example{
+public static void main(String args[]){
+Scanner s=new Scanner(System.in);
+int n=sc.nextInt();
+int i=n;
+while(i>=1){
+Sytem.out.println(i)
+i--;
+}
+
+
+
+6)check valid aadar number
+7)print all even digits in a number
+
+import java.util.*;
+class example{
+
+public static void main(String arg[]){
+Scanner s=new Scanner(System.in);
+int n=s.nextInt();
+while(n>0){
+int digit=n%10;
+if(digit%2==0)
+ System.out.println(digit+" is even");
+n=n/10;
+}
+}
+
+8)frist half array into ascending and second half array into decending
+9)to print armstrong no in range 2000 to 5000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

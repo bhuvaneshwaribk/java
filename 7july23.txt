@@ -1,0 +1,62 @@
+import java.util.*;
+
+ 
+
+class Series1 {
+  public static void main(String p[]) {
+    char character;
+    Scanner t = new Scanner(System.in);
+    // concevrting character to ascii
+    System.out.println("enetr any character");
+    character=t.next().charAt(0);
+    System.out.println(character+" Ascii value is"+ (int)character);
+
+ 
+
+    // converting aSCII to Character
+
+  System.out.println("enetr any Ascii value");
+    int ascii=t.nextInt();
+    if(ascii>=0&&ascii<=127)
+    System.out.println(ascii+" value character is "+ (char)ascii);
+    else
+System.out.println("invalid ascii number");
+  }
+}
+
+
+
+
+
+[10:36] Sneha G   (Guest)
+
+Write a java program to print Fibonacci series up to n terms
+
+[10:41] Srilatha Manam
+
+Serires
+
+
+conver character to ascii,, ascii-charater
+
+ 
+
+find the value of serires
+
+ 
+
+ax1+ax2+ax3+ax4+----axn
+
+ 
+
+
+
+Write tha java program to find lagest digit and smallest digits
+
+in the given number
+
+ 
+
+
+
+write java program to print prime digits in a  given a number

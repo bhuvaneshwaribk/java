@@ -1,0 +1,640 @@
+class Test {
+  public static void main(String j[]) {
+    int i = 23456;
+    // implict type casting ----->jvm
+    long l = i; // converting integer data type into long data type
+    double d = i;
+    // converting integer data type to doubel data type
+    System.out.println(i);
+    System.out.println(l);
+    System.out.println(d);
+
+ 
+
+    double d1 = 12345.6457;
+    // explict type casting---> programer
+    int i1 = (int) d1;
+    // convering double to integer data type
+    short s = (short) d1;
+    // convering double to short integer data type
+    System.out.println(i1);
+    System.out.println(s);
+  }
+}
+
+implict type casting: converting lower data type into higher data type 
+ex: stock market 
+
+explict type casting: converting higher data type into lower data type
+ex: pertol bank
+
+-----------Funcations---------------------------
+function is a set of instruction/statemeent performing some task
+Syntax: 
+datatype function_name(parameters) //parameters are optional
+{
+   
+  //statements
+
+}
+types of functions
+i. pre-defined 
+ex:println(),next(),nextInt() ...
+ii. user defined
+ ex: main(),addition() ...
+ 
+without return data type-->void
+
+function uses:
+- easy to maintain code
+- reusablitiy
+
+
+
+
+class Test {
+
+  public static void main(String j[]) {
+
+    int i=45;
+
+    int m=67;
+
+    Test t=new Test();
+
+     t.addition(i,m);
+
+    int sub=t.substratcion(i,m);
+
+    double mul=t.mutiplication(i,m);
+
+    t.division();     
+
+  }
+
+  void addition(int i, int k)
+
+  {
+
+    System.out.println(i+k);
+
+  }
+
+  int substratcion(int g,int h)
+
+  {
+
+    return g-h;
+
+  }
+
+  double mutiplication(int i,int m)
+
+  {
+
+    return i*m;
+
+  }
+
+  void division()
+
+  {
+
+    System.out.println(20/3);
+
+  }
+
+}
+
+
+
+
+
+class Test {
+  public static void main(String j[]) {
+    int i=45;
+    int m=67;
+    Test t=new Test();
+     t.addition(i,m);
+    int sub=t.substratcion(i,m);
+    double mul=t.mutiplication();
+    t.division();     
+  }
+  void addition(int i, int k)  
+  // return type ---> void
+  // functinn name: addition
+  // parameter--> 2: int i, int k
+  //fucntion without return type and with parameter
+  {
+    System.out.println(i+k);
+  }
+  int substratcion(int g,int h)
+  // function with return type and with parameters
+  {
+    if(checkSecondNumber(h))
+    return g-h;
+    else
+      return 0;
+  }
+double multiplication()
+  // return type ---> double
+  // functinn name: multiplication
+  // parameter--> 3: int i,int m, int g
+  // funtion with retiurn type and without parameter
+  {
+    return 12.3*6;
+  }
+  void division()
+  // return type ---> void
+  // functinn name: division
+  // parameter--> 0
+  // function witour return type and witheout parameters
+  {
+    int d=20, h1=3;
+    if(checkSecondNumber(h1))
+    System.out.println(d/h1);
+  }
+
+ 
+
+
+  boolean checkSecondNumber(int g)
+  {
+    if(g>0)
+      return true;
+    else
+      return false;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Test {
+  public static void main(String j[]) {
+    int i=45;
+    int m=67;
+    Test t=new Test();  // creating object for test calss to access members of test class  addition(), substraction()  etc
+     t.addition(i,m);  // addition(45, 67)
+    //calling function. 
+    // who is calling this function: main() is calling
+    // from here controller transfer to loine number 17 i.e
+   // void addition(int i, int k)
+    int sub=t.substratcion(i,m);  // substraction(45,67)  // it out put is -22 and that will assign to sub
+    //calling function. 
+    // who is calling this function: main() is calling
+    double mul=t.mutiplication();
+    //calling function. 
+    // who is calling this function: main() is calling
+    t.division();     
+  }
+  void addition(int i, int k)   // function definition  //  i=45, k=67  // i is local varaible to addition()
+  // return type ---> void
+  // functinn name: addition
+  // parameter--> 2: int i, int k
+  //fucntion without return type and with parameter
+  {
+    System.out.println(i+k);
+  }  // controller will goback to main()  ie. line no 6
+  int substratcion(int g,int h)// function definition
+  // function with return type and with parameters  g=45 h=67
+  {
+    if(checkSecondNumber(h))  // checkSecondNumber(67)  // output of if condition is true
+    return g-h;  // return 45-67--> -22  it will retrun to calling fucntion
+    else
+      return 0;
+  }
+double multiplication()// function definition
+  // return type ---> double
+  // functinn name: multiplication
+  // parameter--> 3: int i,int m, int g
+  // funtion with retiurn type and without parameter
+  {
+    return 12.3*6;
+  }
+  void division()// function definition
+  // return type ---> void
+  // functinn name: division
+  // parameter--> 0
+  // function witour return type and witheout parameters
+  {
+    int d=20, h1=3;
+    if(checkSecondNumber(h1))
+    System.out.println(d/h1);
+  }
+
+ 
+
+
+  boolean checkSecondNumber(int g)   // g value is 67
+  {
+    if(g>0)
+      return true;  // it will retun value true to calling function
+    else
+      return false;
+  }
+}
+
+
+
+
+
+control statements
+-->decision making statement   ex: if-else,nested-if,if-else ladder, switch
+-->looping/iterative statemnets ex: for loop,while loop, do while
+-->unconditional statements ex: break, continue
+
+
+
+if-else:
+if(condition)
+{
+------        // block is executed if condition is true
+------
+}
+else
+{
+------        //block is executed if condition is false
+------
+}
+
+
+nested if:
+writing  one if condition inside other if condition
+in case we want to check more then one condition 
+if(cond1)
+{
+   if(cond2)
+   {  
+    ----
+   }
+   else
+   {
+    ----
+   }
+}
+else
+{
+-----
+}
+
+
+
+if-els ladder:
+if we want test more condition 
+multiway decision making 
+if(cond1)
+{
+----
+}
+else if(cond2)
+{
+----
+}
+else if(cond3)
+{
+----
+}
+.
+.
+.
+.
+.
+else
+{
+----
+}
+
+
+
+switch:
+test more then one condition 
+multi way decision statement
+
+
+switch(option)
+{
+ case option1:
+    -------
+    break;
+ case option2:
+    -------
+    break;
+.
+.
+.
+.
+.
+
+ default:
+    -------
+    break;
+}
+
+
+
+
+
+
+
+
+
+Write a java program to find maximum between two numbers.
+Write a java program to find maximum between three numbers.
+Write a java program to check whether a number is negative, positive or zero.
+Write a java program to check whether a number is divisible by 5 and 11 or not.
+Write a java program to check whether a number is even or odd.
+Write a java program to check whether a year is leap year or not.
+Write a java program to check whether a character is alphabet or not.
+Write a java program to input any alphabet and check whether it is vowel or   consonant.
+Write a java program to input any character and check whether it is alphabet, digit    or special character.
+Write a java program to check whether a character is uppercase or lowercase    alphabet.
+Write a java program to input week number and print week day.
+Write a java program to count total number of notes in given amount.
+Write a java program to input marks of five subjects Physics, Chemistry, Biology,Mathematics and Computer. Calculate percentage and grade according to following:
+   Percentage >= 90% : Grade A
+
+   Percentage >= 80% : Grade B
+
+   Percentage >= 70% : Grade C
+
+   Percentage >= 60% : Grade D
+
+   Percentage >= 40% : Grade E
+
+   Percentage < 40% : Grade F
+
+Write a java program to input basic salary of an employee and calculate its Gross salary according to following:
+
+   Basic Salary <= 10000 : HRA = 20%, DA = 80%
+
+   Basic Salary <= 20000 : HRA = 25%, DA = 90%
+
+   Basic Salary >20000 : HRA = 30%, DA = 95%
+
+Write a java program to input electricity unit charges and calculate total electricity bill according to the given condition:
+
+   For first 50 units Rs. 0.50/unit
+
+   For next 100 units Rs. 0.75/unit
+
+   For next 100 units Rs. 1.20/unit
+
+   For unit above 250 Rs. 1.50/unit
+
+   An additional surcharge of 20% is added to the bill
+
+Write a java program to print day of week name using switch case.
+
+17)Write a Java program to solve quadratic equations (use if, else if and else
+
+18) Write a program to store your best friend's mobile number in a variable and print the last 4 digits..
+
+19)   Mobile number should accept only 10 digits. Not less than 10 digits or greater than 10 digits. 
+
+ Allow user to input the phone number from the terminal
+
+20) Write a program to calculate your percentage assuming total marks given. Print the percentage after rounding it off. Allow user to input the marks from the terminal.
+
+ 
+
+21) Write a program to declare a character variable and initialize it with any alphabet
+
+between A-Z. Print the ASCII value/unicode of the respective character.
+
+ 
+
+22) Swap without temp   23) Sum without +
+
+
+
+
+
+
+
+
+---------------Quadartic-----------------
+
+import java.util.Scanner;
+
+ 
+
+class Quadartic {
+
+  public static void main(String j[]) {
+
+    double a, b, c;
+
+ 
+
+    System.out.println("Enter values for a,b and c");
+
+    Scanner v = new Scanner(System.in);
+
+    a = v.nextDouble();
+
+    b = v.nextDouble();
+
+    c = v.nextDouble();
+
+    Quadratic q = new Quadratic();
+
+    q.findRoots(a, b, c);
+
+    // it r= q.findRoots(a,b,c); not needed
+
+  }
+
+ 
+
+  void findRoots(double a, double b, double c) {
+
+    double root1, root2;
+
+    if ((b * b) > (4 * a * c) && (a > 0)) {
+
+      root1 = (-b) + Math.sqrt((b * b) - (4 * a * c)) / (2 * a);
+
+      root2 = (-b) - Math.sqrt((b * b) - (4 * a * c)) / (2 * a);
+
+      System.out.println("Root1 value is" + root1);
+
+      System.out.println("Root1 value is" + root2);
+
+    } else {
+
+      System.out.println("roota are imaginary");
+
+    }
+
+ 
+
+  }
+
+ 
+
+}
+
+-------calculate no of notes----------
+
+
+
+import java.util.Scanner;
+
+ 
+
+class CalculateNotes {
+
+  public static void main(String j[]) {
+
+    int amount;
+
+ 
+
+    System.out.println("Enter ny amount");
+
+    Scanner v = new Scanner(System.in);
+
+    amount = v.nextInt();
+
+ 
+
+    CalculateNotes cn = new CalculateNotes();
+
+    int result = cn.findNoofNotes(amount);
+
+    // it r= q.findRoots(a,b,c); not needed
+
+    System.out.println("no of minimum notes required for given" + amount + "=" + result);
+
+  }
+
+ 
+
+  int findNoofNotes(int amount) {
+
+    int note2000 = 0, note500 = 0, note200 = 0, note100 = 0, note50 = 0, note20 = 0, note10 = 0, note5 = 0, note2 = 0,
+
+        note1 = 0;
+
+    int noofnotes;
+
+    while (amount > 0) {
+
+      if (amount >= 2000) {
+
+        note2000 = amount / 2000;
+
+        amount = amount % 2000;
+
+        // amount=amount-(note2000*2000)
+
+      } else if (amount >= 500) {
+
+        note500 = amount / 500;
+
+        amount = amount % 500;
+
+        // amount=amount-(note500*500)
+
+      } else if (amount >= 200) {
+
+        note200 = amount / 200;
+
+        amount = amount % 200;
+
+        // amount=amount-(note200*200)
+
+      } else if (amount >= 100) {
+
+        note100 = amount / 100;
+
+        amount = amount % 100;
+
+        // amount=amount-(note100*100)
+
+      } else if (amount >= 50) {
+
+        note50 = amount / 50;
+
+        amount = amount % 50;
+
+        // amount=amount-(note50*50)
+
+      } else if (amount >= 20) {
+
+        note20 = amount / 20;
+
+        amount = amount % 20;
+
+        // amount=amount-(note20*20)
+
+      } else if (amount >= 10) {
+
+        note10 = amount / 10;
+
+        amount = amount % 10;
+
+        // amount=amount-(note10*10)
+
+      } else if (amount >= 5) {
+
+        note5 = amount / 5;
+
+        amount = amount % 5;
+
+        // amount=amount-(note5*5)
+
+ 
+
+      } else if (amount >= 2) {
+
+        note2 = amount / 2;
+
+        amount = amount % 2;
+
+        // amount=amount-(note2*2)
+
+      } else {
+
+        note1 = amount / 1;
+
+        amount = amount % 1;
+
+        // amount=amount-(note1*1)
+
+      }
+
+    }
+
+    noofnotes = note2000 + note500 + note200 + note100 + note50 + note20 + note10 + note5 + note2 + note1;
+
+    return noofnotes;
+
+  }
+
+ 
+
+}
+
+
+
+
+Write a java program to find maximum between two numbers.
+Write a java program to find maximum between three numbers.
+Write a java program to check whether a number is negative, positive or zero.
+
+
+
